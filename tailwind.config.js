@@ -8,9 +8,9 @@ module.exports = {
       fontFamily: {
         sans: 'Jost, sans-serif'
       },
-      // backgroundImage: {
-      //   app: 'url(/me.jpg)'
-      // },
+      backgroundImage: {
+        app: 'url(/bg.jpg)'
+      },
       backgroundSize: {
         '50%': '50%',
         '16': '4rem',

@@ -2,34 +2,40 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import me from '../../public/me.jpg'
+import About from '../components/about'
+import WorkTeste from '../components/work-teste'
 
 export default function Home() {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-col">
       
-      <div className="text-black h-[90vh] text-8xl text-left flex flex-col justify-center items-end w-full ml-5 pl-10">
+      <div className="text-white h-screen text-5xl flex flex-col justify-center items-center  w-full">
         <motion.p 
-          className="bg-[#0554F2] p-6 pl-96  max-2xl:text-5xl max-lg:text-2xl max-md:pl-60 max-sm:text-xs max-sm:pl-48"
-          initial={{ y: -300 }}
+          className="w-2/5 max-2xl:text-5xl max-lg:text-2xl max-sm:text-xs max-sm:w-full flex justify-center"
+          initial={{ y: 10 }}
           animate={{ y: 0 }}
-          transition={{ duration: 1 }}
         >
-          PEDRO FORADORI 
+          PEDRO FORADORI DESENVOLVEDOR DE SOFTWARE, APP E SITES 
         </motion.p> 
-        <motion.p 
-          className="bg-[#F2EA7E] p-4 pl-96 max-2xl:text-5xl max-lg:text-2xl max-md:pl-60 max-sm:text-xs max-sm:pl-52"
-          initial={{ y: 300 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 2 }}
-        >
-          SOFTWARE ENGINEER
-        </motion.p>
-        {/* <p className="mb-8">Olá!</p>
-        <p className="w-[60rem]">
-          Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu app, site ou software.
-        </p> */}
-        
+        <div className="w-2/5 flex flex-row justify-between mt-10 uppercase max-sm:w-full">
+          <div className="rounded-md border border-green-500 w-32 h-12  text-green-500 text-xs flex items-center justify-center cursor-pointer hover:animate-bounce hover:cursor-pointer">
+            <Link href="/work">
+              projetos
+            </Link>
+          </div>
+          <div className="rounded-md border border-green-500 w-32 h-12 text-green-500 text-xs flex items-center justify-center cursor-pointer hover:animate-bounce hover:cursor-pointer">
+            sobre
+          </div>
+          <div className="rounded-md border border-green-500 w-32 h-12 text-green-500 text-xs flex items-center justify-center cursor-pointer hover:animate-bounce hover:cursor-pointer">
+            contato
+          </div>
+       </div>
       </div>
+      
+
+      {/* <About /> */}
+      
+      {/* <WorkTeste /> */}
     </div>
     
   )
