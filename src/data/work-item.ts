@@ -35,7 +35,7 @@ export default [
         id: 4,
         color: '#FAFAFA',
         imageUrl: '',
-        logo: '/../public/movida.png',
+        logo: '/movida.png',
         title: 'Movida: PROJETO seminovos',
         description: 'Novas funcionalidades no app do bradesco no produto cartão de crédito. Foram adicionados melhorias de layout, integração a novos serviços e criação de novos testes.',
     },
