@@ -21,3 +21,25 @@ body {
   color: #fff
 }
 
+.animation {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.undo-animation {
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+}
+
+@keyframes example {
+  0%   { transform: translate(-50%, 50%)}
+  /* 25%  { top:200px;} */
+  50%  { top:400px;}
+  /* 75%  { top:350px;} */
+  100% { transform: translate(-50%, -50%)}
+}
+

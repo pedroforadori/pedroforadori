@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import me from '../../public/me.jpg'
 import About from '../components/about'
-import WorkTeste from '../components/work-teste'
 
 export default function Home() {
   return (

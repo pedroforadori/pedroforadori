@@ -52,7 +52,10 @@ export default function Work() {
                         description={item.description} 
                         title={item.title} 
                         logo={item.logo}
-                        imageUrl={item.imageUrl} />
+                        imageUrl={item.imageUrl} 
+                        stack={item.stack}
+                        site={item.site}
+                    />
                 ))}
             </div>
             
