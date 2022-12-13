@@ -54,7 +54,7 @@ export default function Work() {
                         logo={item.logo}
                         imageUrl={item.imageUrl} 
                         stack={item.stack}
-                        site={item.site}
+                        
                     />
                 ))}
             </div>

@@ -12,7 +12,11 @@ export interface IWorkItem {
     title: string
     description: string[]
     stack: string[]
-    site: string
+    site?: [{
+        id: number
+        title: string
+        url: string
+    }]
 }
 
 export default function WorkItem(props: IWorkItem) {

@@ -1,13 +1,14 @@
 import { GetServerSideProps } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { title } from "process"
 import { IWorkItem } from "../../components/work-item"
 import workItem from "../../data/work-item"
 
 export default function JobDetail(props: IWorkItem){
 
   return (
-    <div className="flex flex-col items-center mx-auto p-8  text-white gap-6 w-2/3">
+    <div className="flex flex-col items-center mx-auto p-8 text-white gap-6 w-2/3">
       <div className="flex flex-row items-center gap-3">
         <Image src={props.logo} alt={props.title} width={100} height={100} />
         <span className="uppercase text-4xl">{props.title}</span>
@@ -28,7 +29,10 @@ export default function JobDetail(props: IWorkItem){
           </li>
         ))}
       </ol>
-      <Link className="cursor-pointer underline mt-4" href={props.site}>Portal Uniasselvi</Link>
+      {props.site?.map(item => (
+          <Link key={item.id} target="_blank" className="cursor-pointer underline mt-4" href={item.url}>{item.title}</Link>
+      ))}
+      
     </div>
   )
 }

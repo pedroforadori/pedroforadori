@@ -14,7 +14,14 @@ export default [
             'SQLite',
             'Jest'
         ],
-        site: 'https://banco.bradesco/html/classic/index.shtm'
+        site: [
+            {
+                id: 0,
+                title: 'Bradesco Cartões',
+                url: 'https://banco.bradesco/html/classic/index.shtm',
+            }
+            
+        ]
     },
     {
         id: 1,
@@ -26,7 +33,13 @@ export default [
         stack: [
             'React'
         ],
-        site: 'https://www.leroymerlin.com.br/',
+        site: [
+            {
+                id: 0,
+                title: 'Leroy Merlin',
+                url: 'https://www.leroymerlin.com.br/',
+            }
+        ]
     },
     {
         id: 2,
@@ -45,7 +58,13 @@ export default [
             'Wordpress',
             'Vanilla.js',
         ],
-        site: 'https://www.cnnbrasil.com.br/',
+        site: [
+            {
+                id: 0,
+                title: 'CNN Brasil',
+                url: 'https://www.cnnbrasil.com.br/',
+            }
+        ]
     },
     {
         id: 3,
@@ -65,7 +84,13 @@ export default [
             'PHP',
             'React Native',
         ],
-        site: 'https://portal.uniasselvi.com.br/',
+        site: [
+            {
+                id: 0,
+                title: 'Portal Uniasselvi',
+                url: 'https://portal.uniasselvi.com.br/',
+            }
+        ]
     },
     {
         id: 4,
@@ -81,6 +106,12 @@ export default [
             'Angular',
             'Node.js'
         ],
-        site: 'https://www.seminovosmovida.com.br/',
+        site: [
+            {
+                id: 0,
+                title: 'Semi Novos Movida',
+                url: 'https://www.seminovosmovida.com.br/',
+            }
+        ]
     },
 ]
