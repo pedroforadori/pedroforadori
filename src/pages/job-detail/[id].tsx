@@ -2,10 +2,10 @@ import { GetServerSideProps } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { title } from "process"
-import { IWorkItem } from "../../components/work-item"
+import { ICardItem } from "../../components/card"
 import workItem from "../../data/work-item"
 
-export default function JobDetail(props: IWorkItem){
+export default function JobDetail(props: ICardItem){
 
   return (
     <div className="flex flex-col items-center mx-auto p-8 text-white gap-6 w-2/3">
@@ -14,13 +14,13 @@ export default function JobDetail(props: IWorkItem){
         <span className="uppercase text-4xl">{props.title}</span>
       </div>
       <div className="uppercase text-2xl mb-4">
-        {props.description.map(item => (
+        {props.description?.map(item => (
           <p className="mb-4 mt-6" key={item}>{item}</p>
         ))}
       </div>
       <p className="uppercase">Stack utilizada:</p>
       <ol className="flex flex-row gap-2">
-        {props.stack.map(item => (
+        {props.stack?.map(item => (
           <li
            className="border border-white rounded py-1 px-4"  
            key={item}

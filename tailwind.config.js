@@ -9,7 +9,7 @@ module.exports = {
         sans: 'Jost, sans-serif'
       },
       backgroundImage: {
-        app: 'url(/bg.jpg)'
+        app: 'url(/assets/bg.jpg)'
       },
       backgroundSize: {
         '50%': '50%',

@@ -3,8 +3,9 @@ import cnn from '../../public/cnn.svg'
 import leroy from '../../public/leroy.jpg'
 import bradesco from '../../public/bradesco.png'
 import { motion, useScroll } from 'framer-motion'
-import WorkItem from "../components/work-item";
+import WorkItem from "../components/card";
 import workItem from "../data/work-item";
+import Card from "../components/card";
 
 export default function Work() {
     const { scrollYProgress } = useScroll();
@@ -45,16 +46,22 @@ export default function Work() {
             </div>
             <div className="flex flex-wrap justify-center w-1/3 mx-auto ">
                 {workItem.map(item => (
-                    <WorkItem 
+                    <Card 
                         key={item.id}
                         id={item.id}
-                        color={item.color} 
                         description={item.description} 
                         title={item.title} 
                         logo={item.logo}
                         imageUrl={item.imageUrl} 
                         stack={item.stack}
-                        
+                        hover={true}
+                        textHeight={'200px'}
+                        textWidth={'180px'}
+                        width={'200px'}
+                        height={'200px'}
+                        topText={'-10rem'}
+                        marginBotton={'2rem'}
+                        left={'1rem'}
                     />
                 ))}
             </div>
