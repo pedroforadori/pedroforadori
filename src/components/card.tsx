@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { Eye } from 'phosphor-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export interface ICardItem {
     id?: number
@@ -30,17 +30,23 @@ export interface ICardItem {
 
 export default function Card(props: ICardItem) {
     const [ hoverLayout, setHoverLayout ] = useState(false)
+    const [ adjustHoverCard, setAdjustHoverCard ] = useState('')
     const router = useRouter()
 
     function handleClickEye(id: string){
        router.push(`/job-detail/${id}`)
     }
 
-    function onlyNumbers(text: string) 
-    {
+    function onlyNumbers(text: string) {
         var numsStr = text.replace(/[^0-9]/g,'');
         return parseInt(numsStr);
     }
+
+    useEffect(() => {
+        if(window.innerWidth < 640){
+            setAdjustHoverCard('0rem')
+        }
+    }, [])
 
     return (
         <>
@@ -67,14 +73,17 @@ export default function Card(props: ICardItem) {
                                 
                 >
                     <span 
-                        className="absolute top-[-2.4rem] left-[-1rem] rounded-lg border bg-green-400 "                        
+                        className="absolute top-[-2.4rem] left-[-1rem] rounded-lg border bg-green-400 
+                        max-sm:mt-0
+                        "                        
                         style={{
                             display: hoverLayout 
                             ? 'block' 
                             : 'none', width: props.width, height: props.height,
-                            marginTop: props.marginBottonTitle
-                            ? `-${onlyNumbers(props.marginBottonTitle) - 1}rem`
-                            : 0
+                            
+                            marginTop: adjustHoverCard
+                            ? adjustHoverCard
+                            : `-${onlyNumbers(props.marginBottonTitle) - 1}rem`
                         }}
                         onClick={() => handleClickEye(`${props.id}`)}
                     >
