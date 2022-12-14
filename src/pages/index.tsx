@@ -6,7 +6,7 @@ import About from './about'
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col max-sm:p-2">
       
       <div className="text-white h-screen text-5xl flex flex-col justify-center items-center  w-full">
         <motion.p 

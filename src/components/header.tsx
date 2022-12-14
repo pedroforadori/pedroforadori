@@ -23,7 +23,9 @@ export default function Header(){
                     style={{display: menuLayout ? 'block' : 'none'}} />
             </div>
             <div style={{display: menuLayout ? 'block' : 'none'}} className="gap-8">
-                <nav className="w-full h-screen bg-white relative text-6xl max-sm:justify-center p-8 z-10">
+                <nav className="w-full h-screen bg-white relative text-6xl max-sm:justify-center p-8 z-10
+                max-sm:text-3xl
+                ">
                     <Link href="/" onClick={() => setMenuLayout(false)}>
                         <span className="text-black">
                             <div className="flex items-center mb-6" onMouseOver={() => setArrow(true)} onMouseOut={() => setArrow(false)}>

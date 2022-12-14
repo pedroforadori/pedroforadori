@@ -36,13 +36,18 @@ export default function Work() {
 
     return (
         <div className="overflow-hidden w-full">
-            <div className="flex flex-col h-screen items-center mx-auto max-sm:h-auto max-sm:my-8">
+            <div className="flex flex-col h-screen items-center mx-auto 
+            max-lg:h-[90vh]
+            max-sm:h-auto max-sm:my-8">
                 <motion.div
                     className="fixed top-0 left-0 right-0 h-[10px] bg-green-500 origin-left"
                     style={{ scaleX: scrollYProgress }}
                 />
                 <motion.h1
-                    className="w-1/2 uppercase underline text-white text-4xl mt-8 max-sm:text-xs "
+                    className="w-1/2 uppercase underline text-white text-4xl mt-8 
+                    max-lg:text-2xl
+                    max-md:text-xl
+                    max-sm:text-xs "
                     initial={{ x: 200 }}
                     animate={{ x: 0 }}
                     transition={{ duration: 0.9 }}
@@ -50,7 +55,11 @@ export default function Work() {
                     meus projetos e empresas que ja trabalhei como consultor
                 </motion.h1>
                 <motion.p
-                    className="w-1/2 text-white text-4xl mt-8  max-2xl:text-3xl max-sm:text-xs"
+                    className="w-1/2 text-white text-4xl mt-8  
+                    max-2xl:text-3xl 
+                    max-lg:text-2xl 
+                    max-md:text-xl
+                    max-sm:text-xs"
                     initial={{ x: -200 }}
                     animate={{ x: 0 }}
                     transition={{ duration: 2 }}
@@ -58,7 +67,11 @@ export default function Work() {
                     Ao longo dos anos, tive a sorte de ter trabalhado com algumas pessoas e empresas incríveis em alguns projetos interessantes. Abaixo estão algumas das empresas com as quais tive o prazer de trabalhar.
                 </motion.p>
                 <motion.p
-                    className="w-1/2 text-white text-4xl mt-8  max-2xl:text-3xl max-sm:text-xs"
+                    className="w-1/2 text-white text-4xl mt-8 
+                    max-2xl:text-3xl 
+                    max-lg:text-2xl
+                    max-md:text-xl
+                    max-sm:text-xs"
                     initial={{ x: 200 }}
                     animate={{ x: 0 }}
                     transition={{ duration: 3 }}
@@ -67,23 +80,26 @@ export default function Work() {
                     trabalhei no passado.
                 </motion.p>
                 <motion.div 
-                    className="w-full flex justify-center items-end text-green-400 h-2/5"
+                    className="w-full flex justify-center items-end text-green-400 h-2/5
+                    max-sm:hidden"
                     // data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800"
                     whileHover={{y: 5}}
                     initial={{ y: 0 }}
                     animate={{ y: 5 }}
                     transition={{ duration: 1, repeat: Infinity }}
                 >   
-                {arrowScrollY 
-                ? <CaretDoubleDown size={50} weight="thin" onClick={() => handleScrollDown(jobs)}/> 
-                : null }
+                    {arrowScrollY 
+                    ? <CaretDoubleDown size={50} weight="thin" onClick={() => handleScrollDown(jobs)}/> 
+                    : null }
                 
-            </motion.div>
+                </motion.div>
 
             </div>
             
             <div 
-                className="grid grid-cols-2 w-1/3 mx-auto h-screen p-20"
+                className="grid grid-cols-2 w-1/3 mx-auto h-screen p-20 
+                max-2xl:w-1/2 max-xl:w-3/5 max-lg:w-3/4
+                max-sm:flex max-sm:flex-col max-sm:w-full max-sm:h-auto max-sm:p-0 max-sm:items-center"
                 data-aos="fade-up" 
                 data-aos-duration="3000"
                 ref={jobs}
