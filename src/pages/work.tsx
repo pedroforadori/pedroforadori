@@ -1,9 +1,5 @@
-import Image from "next/image";
-import cnn from '../../public/cnn.svg'
-import leroy from '../../public/leroy.jpg'
 import bradesco from '../../public/bradesco.png'
 import { motion, useScroll } from 'framer-motion'
-import WorkItem from "../components/card";
 import workItem from "../data/work-item";
 import Card from "../components/card";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
