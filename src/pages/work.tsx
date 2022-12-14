@@ -27,6 +27,7 @@ export default function Work() {
     function handleScrollDown(ref: MutableRefObject<null>){
         if (typeof window !== "undefined") {
             window.scrollTo({
+                //@ts-ignore
                 top: ref.current?.offsetTop,
                 behavior: 'smooth'
             })
