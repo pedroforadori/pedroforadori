@@ -4,7 +4,7 @@ export default [
         id: 0,
         color: '#FAFAFA',
         imageUrl: '',
-        logo: '/bradesco.png',
+        logo: '/assets/bradesco.png',
         title: 'BRADESCO: PROJETO CARTãO DE CRéDITO',
         description: ['Novas funcionalidades no app do bradesco no produto cartão de crédito. Foram adicionados melhorias de layout, integração a novos serviços e criação de novos testes.'],
         stack: [
@@ -27,7 +27,7 @@ export default [
         id: 1,
         color: '#FAFAFA',
         imageUrl: '',
-        logo: '/leroy.jpg',
+        logo: '/assets/leroy.jpg',
         title: 'LEROY MERLIN: PROJETO TOTEN PARA CONSULTA DE PRODUTOS',
         description: ['Desenvolvimento de novo produto, sendo um toten para consulta de valor e estoque do item desejado.'],
         stack: [
@@ -45,7 +45,7 @@ export default [
         id: 2,
         color: '#FAFAFA',
         imageUrl: '',
-        logo: '/cnn.png',
+        logo: '/assets/cnn.png',
         title: 'CNN BRASIL: PROJETO VIAGEM E GASTRONONIA',
         description: [
             'Desenvolvimento de novo layout para o subsite da CNN Brasil Viagem e Gastronomia.',
@@ -70,7 +70,7 @@ export default [
         id: 3,
         color: '#FAFAFA',
         imageUrl: '',
-        logo: '/uniasselvi.png',
+        logo: '/assets/uniasselvi.png',
         title: 'UNIASSELVI: PROJETO PROVA MONITORADA',
         description: [
             'Responsável pelo produto prova supervisionada',
@@ -96,7 +96,7 @@ export default [
         id: 4,
         color: '#FAFAFA',
         imageUrl: '',
-        logo: '/movida.png',
+        logo: '/assets/movida.png',
         title: 'Movida: PROJETO seminovos',
         description: [
             'A Seminovos Movida é especializada em veículos seminovos, com pontos de venda espalhados pelas principais capitais do país'

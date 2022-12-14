@@ -1,23 +1,74 @@
+import { useEffect } from "react";
 import Card from "../components/card";
 import stackFront from "../data/stack-front";
+import AOS from 'aos'
+import services from "../data/services";
 
 export default function About() {
+    useEffect(() => {
+        AOS.init()
+    }, [])
+
     return (
         <div className="text-white flex flex-col justify-center w-full items-center gap-4">
-            <p className="w-[60rem] text-xl">
+            <p className="w-[60rem] text-xl mb-16">
                 Olá! Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu app, site ou software?
             </p>
-            <div>
-            <hr className="my-6 h-px bg-gray-200 border-0"></hr>
+            <div className="w-full flex flex-row items-center justify-center gap-2">
+                <div 
+                    className="h-[1px] bg-green-400 w-[15%]"
+                    data-aos="fade-right" 
+                    data-aos-duration="3000"
+                />
+                <span className="text-2xl" data-aos="flip-down" data-aos-duration="3000">SERVIÇOS</span>    
+                <div 
+                    className="h-[1px] bg-green-400 w-[15%]"
+                    data-aos="fade-left" 
+                    data-aos-duration="3000"
+                />
             </div>
-            <span className="w-full text-2xl text-center overflow-hidden before:h-[1px] after:h-[1px] after:bg-green-400 
-                            after:inline-block after:relative after:align-middle after:w-1/4 
-                            before:bg-green-400 before:inline-block before:relative before:align-middle 
-                            before:w-1/4 before:right-2 after:left-2 p-4"
+            
+            <div 
+                className="w-2/6 mx-auto grid grid-cols-2 mb-32" 
+                data-aos="fade-up" 
+                data-aos-duration="3000"
+                data-aos-anchor-placement="bottom-bottom"
             >
-                TECNOLOGIAS FRONT-END
-            </span>
-            <div className="flex flex-wrap justify-center items-center w-2/5 mx-auto ">
+                {services.map(item => (
+                    <Card 
+                        key={item.id} 
+                        logo={item.logo} 
+                        title={item.title} 
+                        hover={false} 
+                        textHeight={'230px'}
+                        textWidth={'230px'}
+                        width={'230px'}
+                        height={'230px'}
+                        topText={'-13.5rem'}
+                        imageSize={50}
+                        marginBottonTitle={'0rem'}
+                        spaceBottonLogo={'m-4'}
+                    />
+                ))}
+            </div>
+            <div className="w-full flex flex-row items-center justify-center gap-2">
+                <div 
+                    className="h-[1px] bg-green-400 w-[15%]"
+                    data-aos="fade-right" 
+                    data-aos-duration="3000"
+                />
+                <span className="text-2xl" data-aos="flip-down" data-aos-duration="3000">TECNOLOGIAS FRONT-END</span>    
+                <div 
+                    className="h-[1px] bg-green-400 w-[15%]"
+                    data-aos="fade-left" 
+                    data-aos-duration="3000"
+                />
+            </div>
+            <div 
+                className="w-2/6 mx-auto grid grid-cols-3 mb-32" 
+                data-aos="fade-up" 
+                data-aos-duration="3000"
+            >
                 {stackFront.map(item => (
                     <Card 
                         key={item.id} 
@@ -30,10 +81,24 @@ export default function About() {
                         height={'100px'}
                         topText={'-6.5rem'}
                         imageSize={70}
-                        marginBotton={'0rem'}
+                        marginBottonTitle={'0rem'}
                     />
                 ))}
             </div>
+            <div className="w-full flex flex-row items-center justify-center gap-2">
+                <div 
+                    className="h-[1px] bg-green-400 w-[15%]"
+                    data-aos="fade-right" 
+                    data-aos-duration="3000"
+                />
+                <span className="text-2xl" data-aos="flip-down" data-aos-duration="3000">TECNOLOGIAS BACK-END</span>    
+                <div 
+                    className="h-[1px] bg-green-400 w-[15%]"
+                    data-aos="fade-left" 
+                    data-aos-duration="3000"
+                />
+            </div>
+            
         </div>
     )
 }

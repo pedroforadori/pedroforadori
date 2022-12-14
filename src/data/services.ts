@@ -2,8 +2,8 @@
 export default [
     {
         id: 0,
-        logo: '/assets/react.png',
-        title: 'React',
+        logo: '/assets/system.png',
+        title: 'SISTEMAS',
     },
     {
         id: 1,
@@ -17,12 +17,7 @@ export default [
     },
     {
         id: 4,
-        logo: '/assets/wordpress.png',
-        title: 'Wordpress',
-    },
-    {
-        id: 5,
-        logo: '/assets/tailwind.png',
-        title: 'Tailwind',
+        logo: '/assets/angular.png',
+        title: 'Angular',      
     }
 ]

@@ -23,7 +23,9 @@ export interface ICardItem {
     topText: string
     imageSize?: number
     left?: string
-    marginBotton: string
+    marginBottonTitle: string
+    spaceBottonLogo?: string
+    resume?: string
 }
 
 export default function Card(props: ICardItem) {
@@ -32,6 +34,12 @@ export default function Card(props: ICardItem) {
 
     function handleClickEye(id: string){
        router.push(`/job-detail/${id}`)
+    }
+
+    function onlyNumbers(text: string) 
+    {
+        var numsStr = text.replace(/[^0-9]/g,'');
+        return parseInt(numsStr);
     }
 
     return (
@@ -53,15 +61,21 @@ export default function Card(props: ICardItem) {
                                     maxWidth: props.textWidth, 
                                     maxHeight: props.textHeight, 
                                     top: props.topText,
-                                    marginBottom: props.marginBotton,
+                                    marginBottom: props.marginBottonTitle,
                                     left: props.left
-                                    
                                 }}
                                 
                 >
                     <span 
-                        className="absolute top-[-2.4rem] left-[-1rem] rounded-lg border bg-green-400"
-                        style={{display: hoverLayout ? 'block' : 'none', width: props.width, height: props.height}}
+                        className="absolute top-[-2.4rem] left-[-1rem] rounded-lg border bg-green-400 "                        
+                        style={{
+                            display: hoverLayout 
+                            ? 'block' 
+                            : 'none', width: props.width, height: props.height,
+                            marginTop: props.marginBottonTitle
+                            ? `-${onlyNumbers(props.marginBottonTitle) - 1}rem`
+                            : 0
+                        }}
                         onClick={() => handleClickEye(`${props.id}`)}
                     >
                         <span className="flex justify-center items-center h-full">
@@ -73,10 +87,12 @@ export default function Card(props: ICardItem) {
                         src={props.logo} 
                         alt={props.title} 
                         width={!props.imageSize ? 50 : props.imageSize} height={!props.imageSize ? 50 : props.imageSize} 
-                        className="mx-auto"
+                        className={`mx-auto ${props.spaceBottonLogo}`}
                         quality={100}
                     />
                     {props.title}
+                    {props.resume}
+                    
                 </p>
             </div>
         </>
