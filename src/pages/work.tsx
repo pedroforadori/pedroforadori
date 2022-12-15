@@ -106,13 +106,13 @@ export default function Work() {
             >
                 {workItem.map(item => (
                     <Card 
-                        key={item.id}
-                        id={item.id}
-                        description={item.description} 
-                        title={item.title} 
-                        logo={item.logo}
-                        imageUrl={item.imageUrl} 
-                        stack={item.stack}
+                        key={item?.id}
+                        id={item?.id}
+                        description={item?.description} 
+                        title={item?.title ? item?.title : ''} 
+                        logo={item?.logo}
+                        imageUrl={item?.imageUrl} 
+                        stack={item?.stack}
                         hover={true}
                         textHeight={'200px'}
                         textWidth={'180px'}

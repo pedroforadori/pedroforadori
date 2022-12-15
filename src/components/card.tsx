@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react'
 
 export interface ICardItem {
     id?: number
-    logo: string
+    logo?: string
     imageUrl?: string
-    title: string
+    title?: string
     description?: string[]
     stack?: string[]
     site?: [{
@@ -92,8 +92,8 @@ export default function Card(props: ICardItem) {
                         
                     </span>
                     <Image 
-                        src={props.logo} 
-                        alt={props.title} 
+                        src={props.logo ? props.logo : ''} 
+                        alt={props.title ? props.title : ''} 
                         width={!props.imageSize ? 50 : props.imageSize} height={!props.imageSize ? 50 : props.imageSize} 
                         className={`mx-auto ${props.spaceBottonLogo}`}
                         quality={100}

@@ -11,7 +11,7 @@ export default function JobDetail(props: ICardItem){
     max-sm:w-full
     ">
       <div className="flex flex-row items-center gap-3 max-sm:flex-col">
-        <Image src={props.logo} alt={props.title} width={100} height={100} />
+        <Image src={props.logo ? props.logo : ''} alt={props.title ? props.title : ''} width={100} height={100} />
         <span className="uppercase text-4xl max-sm:text-xl max-sm:mt-4">{props.title}</span>
       </div>
       <div className="text-2xl mb-4 max-sm:text-xl">
