@@ -97,7 +97,7 @@ export default function Work() {
             </div>
             
             <div 
-                className="grid grid-cols-2 w-1/3 mx-auto h-screen p-20 
+                className="grid grid-cols-2 w-1/3 mx-auto h-auto p-20 
                 max-2xl:w-1/2 max-xl:w-3/5 max-lg:w-10/12 max-md:w-full
                 max-sm:flex max-sm:flex-col max-sm:w-full max-sm:h-auto max-sm:p-0 max-sm:items-center"
                 data-aos="fade-up" 

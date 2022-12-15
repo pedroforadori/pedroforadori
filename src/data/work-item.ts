@@ -6,7 +6,7 @@ export default [
         id: 0,
         imageUrl: '',
         logo: '/assets/bradesco.png',
-        title: 'BRADESCO: PROJETO CARTãO DE CRéDITO',
+        title: 'BRADESCO: CARTãO DE CRéDITO',
         description: ['Novas funcionalidades no app do bradesco no produto cartão de crédito. Foram adicionados melhorias de layout, integração a novos serviços e criação de novos testes.'],
         stack: [
             'React Native',
@@ -28,7 +28,7 @@ export default [
         id: 1,
         imageUrl: '',
         logo: '/assets/leroy.jpg',
-        title: 'LEROY MERLIN: PROJETO TOTEN PARA CONSULTA DE PRODUTOS',
+        title: 'LEROY MERLIN: TOTEN PARA CONSULTA DE PRODUTOS',
         description: ['Desenvolvimento de novo produto, sendo um toten para consulta de valor e estoque do item desejado.'],
         stack: [
             'React Native'
@@ -45,7 +45,7 @@ export default [
         id: 2,
         imageUrl: '',
         logo: '/assets/cnn.png',
-        title: 'CNN BRASIL: PROJETO VIAGEM E GASTRONONIA',
+        title: 'CNN BRASIL: VIAGEM E GASTRONONIA',
         description: [
             'Desenvolvimento de novo layout para o subsite da CNN Brasil Viagem e Gastronomia.',
             'Inicio do planejamento e desenvolvimento do site principal.',
@@ -69,7 +69,7 @@ export default [
         id: 3,
         imageUrl: '',
         logo: '/assets/uniasselvi.png',
-        title: 'UNIASSELVI: PROJETO PROVA MONITORADA',
+        title: 'UNIASSELVI: PROVA MONITORADA',
         description: [
             'Responsável pelo produto prova supervisionada',
             'O que é?',
@@ -94,7 +94,7 @@ export default [
         id: 4,
         imageUrl: '',
         logo: '/assets/movida.png',
-        title: 'Movida: PROJETO seminovos',
+        title: 'Movida: seminovos',
         description: [
             'A Seminovos Movida é especializada em veículos seminovos, com pontos de venda espalhados pelas principais capitais do país'
         ],
@@ -115,9 +115,9 @@ export default [
         id: 5,
         imageUrl: '',
         logo: '/assets/banco-pan.png',
-        title: 'Movida: PROJETO seminovos',
+        title: 'Movida: seminovos',
         description: [
-            'Desenvolvimento de projeto internos. Para as areas:',
+            'Desenvolvimento de internos. Para as areas:',
             'Cartões, ouvidoria, juridico e compliance.'
         ],
         stack: [
@@ -138,12 +138,11 @@ export default [
             }
         ]
     },
-    ,
     {
         id: 6,
         imageUrl: '',
         logo: '/assets/vhc.jpg',
-        title: 'VHC Hospitality: PROJETO Melhorias de performance',
+        title: 'VHC Hospitality: Melhorias de performance',
         description: [
             '"Air Bnb" de casas de luxo'
         ],
@@ -155,6 +154,130 @@ export default [
                 id: 0,
                 title: 'VHC Hospitality',
                 url: 'https://www.experiencekissimmee.com/',
+            }
+        ]
+    },
+    {
+        id: 7,
+        imageUrl: '',
+        logo: '/assets/linx.png',
+        title: 'Linx: Farmacloud, Dashboard Vendas e Migração de Dados',
+        description: [
+            'Farmacloud: Conversão de ERP desktop para web',
+            'Dashboard Vendas: Melhorias e correções de bugs',
+            'Migração de dados: Software para trafego de banco de dados'
+        ],
+        stack: [
+            'Angular',
+            'Knokout.js',
+            '.Net',
+            'SQL Server'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Linx',
+                url: 'https://www.linx.com.br/',
+            }
+        ]
+    },
+    {
+        id: 8,
+        imageUrl: '',
+        logo: '/assets/ouroinvest.png',
+        title: 'Banco Ouroinvest: Pix',
+        description: [
+            'Primeira versão do app com integração ao PIX, publicado nas lojas: Apple Store e Play Store.',
+        ],
+        stack: [
+            'React Native'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Ourinvest',
+                url: 'https://www.ourinvest.com.br/',
+            }
+        ]
+    },
+    {
+        id: 9,
+        imageUrl: '',
+        logo: '/assets/obras-online.jpg',
+        title: 'Obras Online: Unificação de Produtos',
+        description: [
+            'Unificar dois produtos, extraindo o melhor de cada um deles. ',
+        ],
+        stack: [
+            '.Net',
+            'Worpress',
+            'Angular.js',
+            'SQL Server'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Obras Online',
+                url: 'https://obrasonline.com.br/',
+            }
+        ]
+    },
+    {
+        id: 10,
+        imageUrl: '',
+        logo: '/assets/ipsos.png',
+        title: 'Ipsos: Cliente Oculto - Leroy Merlin',
+        description: [
+            'Dashboard para visualização de atividades do cliente oculto da Leroy Merlin',
+        ],
+        stack: [
+            '.Net',
+            'Vanilla.js',
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'IPSOS',
+                url: 'https://www.ipsos.com/pt-br',
+            }
+        ]
+    },
+    {
+        id: 11,
+        imageUrl: '',
+        logo: '/assets/plin.png',
+        title: 'Plin: Desenvolvimento de ERP para condominios',
+        description: [
+            'Software de gestão condominial.',
+        ],
+        stack: [
+            'React',
+            'Typescript'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Plin',
+                url: 'https://www.plincondominios.com.br/',
+            }
+        ]
+    },
+    {
+        id: 12,
+        imageUrl: '',
+        logo: '/assets/pedidosnet.png',
+        title: 'Pedidos Net: Desenvolvimento de app',
+        description: [
+            'Aplicativo de pedido de comida, para o interior de São Paulo, com cashback.',
+        ],
+        stack: [
+            'Ionic'
+        ],
+        site: [
+            {
+                id: 0,
+                title: '',
+                url: '',
             }
         ]
     },
