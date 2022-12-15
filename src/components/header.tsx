@@ -40,7 +40,7 @@ export default function Header(){
                         <hr className="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
                     </Link>
                     <Link href="/work" onClick={() => setMenuLayout(false)}>
-                    <span className="text-black">
+                        <span className="text-black">
                             <div className="flex items-center mb-6" onMouseOver={() => setArrowWork(true)} onMouseOut={() => setArrowWork(false)}>
                                 <span 
                                     style={{display: arrowWork ? 'block' : 'none'}}
@@ -53,7 +53,7 @@ export default function Header(){
                         <hr className="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
                     </Link>
                     <Link href="/about" onClick={() => setMenuLayout(false)}>
-                    <span className="text-black">
+                        <span className="text-black">
                             <div className="flex items-center mb-6" onMouseOver={() => setArrowAbout(true)} onMouseOut={() => setArrowAbout(false)}>
                                 <span 
                                     style={{display: arrowAbout ? 'block' : 'none'}}

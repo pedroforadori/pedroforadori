@@ -24,5 +24,10 @@ export default [
         id: 5,
         logo: '/assets/tailwind.png',
         title: 'Tailwind',
+    },
+    {
+        id: 5,
+        logo: '/assets/typescript.png',
+        title: 'Typescript',
     }
 ]

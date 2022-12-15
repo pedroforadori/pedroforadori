@@ -1,8 +1,9 @@
 // eslint-disable-next-line import/no-anonymous-default-export
+import uuid from 'react-uuid';
+
 export default [
     {
         id: 0,
-        color: '#FAFAFA',
         imageUrl: '',
         logo: '/assets/bradesco.png',
         title: 'BRADESCO: PROJETO CARTãO DE CRéDITO',
@@ -25,13 +26,12 @@ export default [
     },
     {
         id: 1,
-        color: '#FAFAFA',
         imageUrl: '',
         logo: '/assets/leroy.jpg',
         title: 'LEROY MERLIN: PROJETO TOTEN PARA CONSULTA DE PRODUTOS',
         description: ['Desenvolvimento de novo produto, sendo um toten para consulta de valor e estoque do item desejado.'],
         stack: [
-            'React'
+            'React Native'
         ],
         site: [
             {
@@ -43,7 +43,6 @@ export default [
     },
     {
         id: 2,
-        color: '#FAFAFA',
         imageUrl: '',
         logo: '/assets/cnn.png',
         title: 'CNN BRASIL: PROJETO VIAGEM E GASTRONONIA',
@@ -68,7 +67,6 @@ export default [
     },
     {
         id: 3,
-        color: '#FAFAFA',
         imageUrl: '',
         logo: '/assets/uniasselvi.png',
         title: 'UNIASSELVI: PROJETO PROVA MONITORADA',
@@ -94,7 +92,6 @@ export default [
     },
     {
         id: 4,
-        color: '#FAFAFA',
         imageUrl: '',
         logo: '/assets/movida.png',
         title: 'Movida: PROJETO seminovos',
@@ -111,6 +108,53 @@ export default [
                 id: 0,
                 title: 'Semi Novos Movida',
                 url: 'https://www.seminovosmovida.com.br/',
+            }
+        ]
+    },
+    {
+        id: 5,
+        imageUrl: '',
+        logo: '/assets/banco-pan.png',
+        title: 'Movida: PROJETO seminovos',
+        description: [
+            'Desenvolvimento de projeto internos. Para as areas:',
+            'Cartões, ouvidoria, juridico e compliance.'
+        ],
+        stack: [
+            '.Net',
+            'Jquery',
+            'Angular.js',
+            'Php',
+            'ASP',
+            'Java',
+            'SQL Server',
+            'Oracle'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Banco Pan',
+                url: 'https://www.bancopan.com.br/',
+            }
+        ]
+    },
+    ,
+    {
+        id: 6,
+        imageUrl: '',
+        logo: '/assets/vhc.jpg',
+        title: 'VHC Hospitality: PROJETO Melhorias de performance',
+        description: [
+            '"Air Bnb" de casas de luxo'
+        ],
+        stack: [
+            'Angular'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'VHC Hospitality',
+                url: 'https://www.experiencekissimmee.com/',
             }
         ]
     },

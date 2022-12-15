@@ -60,9 +60,9 @@ export default function Card(props: ICardItem) {
                     className="opacity-10 rounded-lg border border-slate-100 bg-white"
                     style={{width: props.width, height: props.height}}
                 />
-                <p className="relative text-white text-xs
+                <p className="relative text-white text-xs text-center
                                 max-2xl:text-xs 
-                                max-sm:text-xs max-sm:w-48 max-sm:p-2 max-sm:mb-1 max-sm:px-2 max-sm:left-2 text-center"
+                                max-sm:text-xs max-sm:mb-1"
                                 style={{
                                     maxWidth: props.textWidth, 
                                     maxHeight: props.textHeight, 
@@ -81,9 +81,8 @@ export default function Card(props: ICardItem) {
                             ? 'block' 
                             : 'none', width: props.width, height: props.height,
                             
-                            marginTop: adjustHoverCard
-                            ? adjustHoverCard
-                            : `-${onlyNumbers(props.marginBottonTitle) - 1}rem`
+                            marginTop: `-${onlyNumbers(props.marginBottonTitle) - 1}rem`
+                            
                         }}
                         onClick={() => handleClickEye(`${props.id}`)}
                     >
@@ -99,9 +98,15 @@ export default function Card(props: ICardItem) {
                         className={`mx-auto ${props.spaceBottonLogo}`}
                         quality={100}
                     />
-                    {props.title}
-                    {props.resume}
-                    
+                    <span className="grid grid-cols-1">
+                        <span>
+                            {props.title}
+                        </span>
+                        
+                        <span className="p-4">
+                            {props.resume}
+                        </span>
+                    </span>
                 </p>
             </div>
         </>

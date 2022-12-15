@@ -23,10 +23,14 @@ export default function Home() {
             </Link>
           </div>
           <div className="rounded-md border border-green-500 w-32 h-12 text-green-500 text-xs flex items-center justify-center cursor-pointer hover:animate-bounce hover:cursor-pointer">
-            sobre
+            <Link href="/about">
+              sobre
+            </Link>
           </div>
           <div className="rounded-md border border-green-500 w-32 h-12 text-green-500 text-xs flex items-center justify-center cursor-pointer hover:animate-bounce hover:cursor-pointer">
-            contato
+            <Link href="/contact">
+              contato
+            </Link>
           </div>
        </div>
       </div>
