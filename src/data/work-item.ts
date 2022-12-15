@@ -1,10 +1,8 @@
 // eslint-disable-next-line import/no-anonymous-default-export
-import uuid from 'react-uuid';
-
 export default [
     {
         id: 0,
-        imageUrl: '',
+        project: 1,
         logo: '/assets/bradesco.png',
         title: 'BRADESCO: CARTãO DE CRéDITO',
         description: ['Novas funcionalidades no app do bradesco no produto cartão de crédito. Foram adicionados melhorias de layout, integração a novos serviços e criação de novos testes.'],
@@ -26,7 +24,7 @@ export default [
     },
     {
         id: 1,
-        imageUrl: '',
+        project: 1,
         logo: '/assets/leroy.jpg',
         title: 'LEROY MERLIN: TOTEN PARA CONSULTA DE PRODUTOS',
         description: ['Desenvolvimento de novo produto, sendo um toten para consulta de valor e estoque do item desejado.'],
@@ -43,7 +41,7 @@ export default [
     },
     {
         id: 2,
-        imageUrl: '',
+        project: 4,
         logo: '/assets/cnn.png',
         title: 'CNN BRASIL: VIAGEM E GASTRONONIA',
         description: [
@@ -67,7 +65,7 @@ export default [
     },
     {
         id: 3,
-        imageUrl: '',
+        project: 2,
         logo: '/assets/uniasselvi.png',
         title: 'UNIASSELVI: PROVA MONITORADA',
         description: [
@@ -92,7 +90,7 @@ export default [
     },
     {
         id: 4,
-        imageUrl: '',
+        project: 1,
         logo: '/assets/movida.png',
         title: 'Movida: seminovos',
         description: [
@@ -113,11 +111,11 @@ export default [
     },
     {
         id: 5,
-        imageUrl: '',
+        project: 10,
         logo: '/assets/banco-pan.png',
         title: 'Movida: seminovos',
         description: [
-            'Desenvolvimento de internos. Para as areas:',
+            'Desenvolvimento de projetos internos. Para as areas:',
             'Cartões, ouvidoria, juridico e compliance.'
         ],
         stack: [
@@ -140,7 +138,7 @@ export default [
     },
     {
         id: 6,
-        imageUrl: '',
+        project: 1,
         logo: '/assets/vhc.jpg',
         title: 'VHC Hospitality: Melhorias de performance',
         description: [
@@ -159,7 +157,7 @@ export default [
     },
     {
         id: 7,
-        imageUrl: '',
+        project: 3,
         logo: '/assets/linx.png',
         title: 'Linx: Farmacloud, Dashboard Vendas e Migração de Dados',
         description: [
@@ -183,7 +181,7 @@ export default [
     },
     {
         id: 8,
-        imageUrl: '',
+        project: 1,
         logo: '/assets/ouroinvest.png',
         title: 'Banco Ouroinvest: Pix',
         description: [
@@ -202,11 +200,12 @@ export default [
     },
     {
         id: 9,
-        imageUrl: '',
+        project: 2,
         logo: '/assets/obras-online.jpg',
         title: 'Obras Online: Unificação de Produtos',
         description: [
-            'Unificar dois produtos, extraindo o melhor de cada um deles. ',
+            'Unificar dois produtos, extraindo o melhor de cada um deles.',
+            'Correções de bus e melhorias no legado.',
         ],
         stack: [
             '.Net',
@@ -224,15 +223,17 @@ export default [
     },
     {
         id: 10,
-        imageUrl: '',
+        project: 2,
         logo: '/assets/ipsos.png',
         title: 'Ipsos: Cliente Oculto - Leroy Merlin',
         description: [
             'Dashboard para visualização de atividades do cliente oculto da Leroy Merlin',
+            'Dashboard interativo'
         ],
         stack: [
             '.Net',
             'Vanilla.js',
+            'Dragula.js'
         ],
         site: [
             {
@@ -244,7 +245,7 @@ export default [
     },
     {
         id: 11,
-        imageUrl: '',
+        project: 1,
         logo: '/assets/plin.png',
         title: 'Plin: Desenvolvimento de ERP para condominios',
         description: [
@@ -257,27 +258,50 @@ export default [
         site: [
             {
                 id: 0,
-                title: 'Plin',
-                url: 'https://www.plincondominios.com.br/',
+                title: 'Orpak System',
+                url: 'https://www.orpak.com/',
             }
         ]
     },
     {
         id: 12,
-        imageUrl: '',
-        logo: '/assets/pedidosnet.png',
-        title: 'Pedidos Net: Desenvolvimento de app',
+        project: 2,
+        logo: '/assets/orpak.jpg',
+        title: 'Orpak System: Migração de desktop para web',
         description: [
-            'Aplicativo de pedido de comida, para o interior de São Paulo, com cashback.',
+            'Migração de software desktop de posto combustivel, para web.',
+            'Desenvolmento para POS de controle checkout de compra'
         ],
         stack: [
-            'Ionic'
+            'Angular',
+            'Node.js',
+            '.Net'
         ],
         site: [
             {
                 id: 0,
                 title: '',
                 url: '',
+            }
+        ]
+    },
+    {
+        id: 12,
+        project: 1,
+        logo: '/assets/santander.png',
+        title: 'Santander - ATM',
+        description: [
+            'Manutenção software ATM do Santander.',
+        ],
+        stack: [
+            'Angular',
+            'Node.js',
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Santander',
+                url: 'https://www.santander.com.br/',
             }
         ]
     },

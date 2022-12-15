@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 export interface ICardItem {
     id?: number
     logo?: string
-    imageUrl?: string
+    project?: number
     title?: string
     description?: string[]
     stack?: string[]

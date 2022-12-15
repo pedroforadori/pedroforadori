@@ -26,7 +26,7 @@ export default [
         title: 'Tailwind',
     },
     {
-        id: 5,
+        id: 6,
         logo: '/assets/typescript.png',
         title: 'Typescript',
     }

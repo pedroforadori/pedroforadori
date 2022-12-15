@@ -111,7 +111,6 @@ export default function Work() {
                         description={item?.description} 
                         title={item?.title ? item?.title : ''} 
                         logo={item?.logo}
-                        imageUrl={item?.imageUrl} 
                         stack={item?.stack}
                         hover={true}
                         textHeight={'200px'}

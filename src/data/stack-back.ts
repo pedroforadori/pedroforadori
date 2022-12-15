@@ -26,7 +26,7 @@ export default [
         title: 'MySql',
     },
     {
-        id: 5,
+        id: 6,
         logo: '/assets/mongodb.png',
         title: 'MongoDB',
     }
