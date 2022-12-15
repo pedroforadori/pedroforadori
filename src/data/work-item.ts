@@ -259,7 +259,7 @@ export default [
             {
                 id: 0,
                 title: 'Orpak System',
-                url: 'https://www.orpak.com/',
+                url: 'https://www.plincondominios.com.br/',
             }
         ]
     },
