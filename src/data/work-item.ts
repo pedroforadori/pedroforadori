@@ -285,24 +285,4 @@ export default [
             }
         ]
     },
-    {
-        id: 12,
-        project: 1,
-        logo: '/assets/santander.png',
-        title: 'Santander - ATM',
-        description: [
-            'Manutenção software ATM do Santander.',
-        ],
-        stack: [
-            'Angular',
-            'Node.js',
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Santander',
-                url: 'https://www.santander.com.br/',
-            }
-        ]
-    },
 ]
