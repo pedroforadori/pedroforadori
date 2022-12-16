@@ -15,7 +15,7 @@ export default function Social() {
       </span>
       <span>
         <Link
-          href="https://github.com/pedroforadori"
+          href="https://www.linkedin.com/in/pedro-foradori-3050a78a/"
           target="_blank"
           className="hover:text-green-400"
         >
@@ -24,7 +24,7 @@ export default function Social() {
       </span>
       <span>
         <Link
-          href="https://www.linkedin.com/in/pedro-foradori-3050a78a/"
+          href="https://www.instagram.com/pedroforadori/"
           target="_blank"
           className="hover:text-green-400"
         >
