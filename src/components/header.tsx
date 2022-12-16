@@ -15,7 +15,7 @@ export default function Header(){
       }
     return (
         <div className="h-16 w-full my-auto text-white text-xl mt-4 max-sm:text-xs">
-            <div className="flex w-28 flex-row items-center gap-2  hover:text-green-400 cursor-pointer
+            <div className="flex w-28 flex-row items-center gap-2  hover:text-green-700 cursor-pointer
             max-sm:w-20">
                 <List 
                     size={40} 

@@ -9,7 +9,7 @@ export default function Document () {
             <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet"></link>
             <link rel="shortcut icon" href="/assets/beer.ico" />
         </Head>
-        <body className="bg-app h-screen bg-cover bg-center bg-no-repeat bg-fixed">
+        <body className="bg-app h-screen bg-cover bg-center bg-no-repeat bg-fixed overflow-x-hidden">
             <Main />
             <NextScript />
         </body>

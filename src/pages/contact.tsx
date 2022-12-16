@@ -4,12 +4,17 @@ import { WhatsappLogo } from "phosphor-react";
 import { FormEvent, useEffect, useState } from "react";
 import me from '../../public/assets/me.jpg'
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser'
+import loaderGif from '../../public/assets/gif-loader.gif'
+import Loader from "../components/loader";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState(true);
+  const [ emailSucess, setEmailSucess] = useState('')
+  const [loader, setLoader ] = useState(false)
 
   useEffect(() => {}, []);
 
@@ -19,6 +24,27 @@ export default function Contact() {
     if (name === "" && email === "" && message === "") {
       return;
     }
+
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email
+    }
+
+    setLoader(true)
+
+    emailjs.send('service_de3jc8g', 'template_boso1y5', templateParams, 'bHD7eqUy0xfHqhhqD')
+    .then((response) => {
+      setName("")
+      setEmail("")
+      setMessage("")
+      setLoader(false)
+      setEmailSucess("Email enviado com sucesso! :D")
+
+    }, (error) => {
+      console.log(error)
+    })
+    
   }
 
   return (
@@ -59,18 +85,20 @@ export default function Contact() {
               focus:outline-none required:focus:border-b-red-600 required:focus:placeholder-red-600  max-sm:h-20"
               onChange={(e) => setMessage(e.target.value)}
             />
-
+  
             <motion.button
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.7 },
-                }}
-                whileTap={{ scale: 0.8 }}
                 type="submit"
-                className="bg-black rounded text-white h-10 w-full"
+                className="bg-black rounded text-white h-10 w-full hover:opacity-80"
             >
-                Enviar
+              <div className="flex">
+                <div className="flex-1">Enviar</div>
+                {loader
+                ? <div className="mr-3"><Loader /></div>
+                : null
+                }
+              </div>
             </motion.button>
+            <p>{emailSucess}</p>
         </form>
       </div>
 
