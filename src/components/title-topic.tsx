@@ -7,7 +7,8 @@ export default function TitleTopic(props: ITitleTopic) {
     <div className="w-full flex flex-row items-center justify-center gap-2
     max-sm:mt-0">
         <div 
-            className="h-[1px] bg-green-400 w-[15%]"
+            className="h-[1px] bg-green-400 w-[15%]
+            max-sm:w-[9%] max-sm:h-[2px]"
             data-aos="fade-right" 
             data-aos-duration="3000"
         />
@@ -17,7 +18,8 @@ export default function TitleTopic(props: ITitleTopic) {
                 {props.text}
         </span>    
         <div 
-            className="h-[1px] bg-green-400 w-[15%]"
+            className="h-[1px] bg-green-400 w-[15%]
+            max-sm:w-[9%] max-sm:h-[2px]"
             data-aos="fade-left" 
             data-aos-duration="3000"
         />

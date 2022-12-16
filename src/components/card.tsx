@@ -60,7 +60,8 @@ export default function Card(props: ICardItem) {
                     className="opacity-10 rounded-lg border border-slate-100 bg-white"
                     style={{width: props.width, height: props.height}}
                 />
-                <p className="relative text-white text-xs text-center
+                <p 
+                className="relative text-white text-xs text-center
                                 max-2xl:text-xs 
                                 max-sm:text-xs max-sm:mb-1"
                                 style={{

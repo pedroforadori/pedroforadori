@@ -23,7 +23,7 @@ export default function Header(){
                     style={{display: menuLayout ? 'block' : 'none'}} />
             </div>
             <div style={{display: menuLayout ? 'block' : 'none'}}>
-                <nav className="w-full h-screen bg-white absolute overflow-x-hidden text-6xl max-sm:justify-center p-8 z-20
+                <nav className="w-full h-screen bg-white absolute overflow-x-hidden text-6xl max-sm:justify-center p-8 z-10
                 max-sm:text-3xl
                 ">
                     <Link href="/" onClick={() => setMenuLayout(false)}>
