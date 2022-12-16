@@ -9,7 +9,7 @@ export default function Header(){
     const [ arrowAbout, setArrowAbout ] = useState(false) 
     const [ arrowContact, setArrowContact ] = useState(false) 
     return (
-        <div className="h-16 w-full my-auto text-white text-xl p-4 max-sm:text-xs">
+        <div className="h-16 w-full my-auto text-white text-xl mt-4 max-sm:text-xs">
             <div className="flex flex-row items-center gap-2">
                 <List 
                     size={40} 
@@ -22,8 +22,8 @@ export default function Header(){
                     onClick={() => setMenuLayout(false)} 
                     style={{display: menuLayout ? 'block' : 'none'}} />
             </div>
-            <div style={{display: menuLayout ? 'block' : 'none'}} className="gap-8">
-                <nav className="w-full h-screen bg-white relative text-6xl max-sm:justify-center p-8 z-10
+            <div style={{display: menuLayout ? 'block' : 'none'}}>
+                <nav className="w-full h-screen bg-white absolute overflow-x-hidden text-6xl max-sm:justify-center p-8 z-20
                 max-sm:text-3xl
                 ">
                     <Link href="/" onClick={() => setMenuLayout(false)}>

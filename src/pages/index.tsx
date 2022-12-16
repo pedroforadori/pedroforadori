@@ -7,7 +7,6 @@ import About from './about'
 export default function Home() {
   return (
     <div className="flex flex-col max-sm:p-2">
-      
       <div className="text-white h-screen text-5xl flex flex-col justify-center items-center  w-full">
         <motion.p 
           className="w-2/5 max-2xl:text-5xl max-lg:text-2xl max-sm:text-xs max-sm:w-full flex justify-center"
@@ -34,11 +33,6 @@ export default function Home() {
           </div>
        </div>
       </div>
-      
-
-      {/* <About /> */}
-      
-      {/* <WorkTeste /> */}
     </div>
     
   )

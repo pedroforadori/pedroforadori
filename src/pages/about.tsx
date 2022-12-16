@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Card from "../components/card";
-import stackFront from "../data/stack-front";
 import AOS from 'aos'
-import services from "../data/services";
-import stackBack from "../data/stack-back";
-import stackMobile from "../data/stack-mobile";
 import workItem from "../data/work-item";
+import TitleTopic from "../components/title-topic";
+import Services from "../components/services";
+import Frontend from "../components/frontend";
+import Mobile from "../components/mobile";
+import Backend from "../components/backend";
 
 
 export default function About() {
@@ -27,9 +27,8 @@ export default function About() {
     }, [])
 
     return (
-        <div className="text-white flex flex-col justify-center items-center gap-4
-        ">
-            <p className="w-2/3 text-xl mb-16 mt-4 px-8
+        <div className="text-white flex flex-col justify-center items-center gap-4">
+            <p className="w-2/3 text-xl mb-16 mt-4
             max-sm:w-96 max-sm:mb-4">
                 Olá! Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu app, site ou software?
             </p>
@@ -45,170 +44,17 @@ export default function About() {
                 </p>
             </div>
             
-            <div className="w-full flex flex-row items-center justify-center gap-2
-            max-sm:mt-0">
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-right" 
-                    data-aos-duration="3000"
-                />
-                <span className="text-2xl max-sm:text-xl" 
-                      data-aos="flip-down" 
-                      data-aos-duration="3000">
-                        SERVIÇOS
-                </span>    
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-left" 
-                    data-aos-duration="3000"
-                />
-            </div>
-            
-            <div 
-                className="mx-auto grid grid-cols-2 mb-32
-                max-sm:grid-cols-1 max-sm:mb-16" 
-                data-aos="fade-up" 
-                data-aos-duration="3000"
-            >
-                {services.map(item => (
-                    <Card 
-                        key={item.id} 
-                        logo={item.logo} 
-                        title={item.title} 
-                        hover={false} 
-                        textHeight={'230px'}
-                        textWidth={'230px'}
-                        width={'230px'}
-                        height={'230px'}
-                        topText={'-13.5rem'}
-                        imageSize={50}
-                        marginBottonTitle={'0rem'}
-                        spaceBottonLogo={'m-4'}
-                        resume={item.resume}
-                    />
-                ))}
-            </div>
-            <div className="w-full flex flex-row items-center justify-center gap-2
-            max-sm:mt-0">
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-right" 
-                    data-aos-duration="3000"
-                />
-                <span className="text-2xl max-sm:text-xl" 
-                      data-aos="flip-down" 
-                      data-aos-duration="3000">
-                        FRONT-END
-                </span>    
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-left" 
-                    data-aos-duration="3000"
-                />
-            </div>
-            <div 
-                className="mx-auto grid grid-cols-3 mb-32
-                max-sm:grid-cols-2 max-sm:mb-16" 
-                data-aos="fade-up" 
-                data-aos-duration="3000"
-            >
-                {stackFront.map(item => (
-                    <Card 
-                        key={item.id} 
-                        logo={item.logo} 
-                        title={item.title} 
-                        hover={false} 
-                        textHeight={'120px'}
-                        textWidth={'115px'}
-                        width={'120px'}
-                        height={'100px'}
-                        topText={'-6.5rem'}
-                        imageSize={70}
-                        marginBottonTitle={'0rem'}
-                    />
-                ))}
-            </div>
-            <div className="w-full flex flex-row items-center justify-center gap-2
-            max-sm:mt-0">
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-right" 
-                    data-aos-duration="3000"
-                />
-                <span className="text-2xl max-sm:text-xl" 
-                      data-aos="flip-down" 
-                      data-aos-duration="3000">
-                        MOBILE
-                </span>    
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-left" 
-                    data-aos-duration="3000"
-                />
-            </div>
-            <div 
-                className="mx-auto grid grid-cols-2 mb-32
-                max-sm:grid-cols-2 max-sm:mb-16" 
-                data-aos="fade-up" 
-                data-aos-duration="3000"
-            >
-                {stackMobile.map(item => (
-                    <Card 
-                        key={item.id} 
-                        logo={item.logo} 
-                        title={item.title} 
-                        hover={false} 
-                        textHeight={'120px'}
-                        textWidth={'115px'}
-                        width={'120px'}
-                        height={'100px'}
-                        topText={'-6.5rem'}
-                        imageSize={70}
-                        marginBottonTitle={'0rem'}
-                    />
-                ))}
-            </div>
-            <div className="w-full flex flex-row items-center justify-center gap-2
-            max-sm:mt-0">
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-right" 
-                    data-aos-duration="3000"
-                />
-                <span className="text-2xl max-sm:text-xl" 
-                      data-aos="flip-down" 
-                      data-aos-duration="3000">
-                        BACK-END
-                </span>    
-                <div 
-                    className="h-[1px] bg-green-400 w-[15%]"
-                    data-aos="fade-left" 
-                    data-aos-duration="3000"
-                />
-            </div>
-            <div 
-                className="mx-auto grid grid-cols-3 mb-32
-                max-sm:grid-cols-2 max-sm:mb-16" 
-                data-aos="fade-up" 
-                data-aos-duration="3000"
-            >
-                {stackBack.map(item => (
-                    <Card 
-                        key={item.id} 
-                        logo={item.logo} 
-                        title={item.title} 
-                        hover={false} 
-                        textHeight={'120px'}
-                        textWidth={'115px'}
-                        width={'120px'}
-                        height={'100px'}
-                        topText={'-6.5rem'}
-                        imageSize={70}
-                        marginBottonTitle={'0rem'}
-                    />
-                ))}
-            </div>
-           
+            <TitleTopic text="SERVIÇOS" />
+            <Services />
+
+            <TitleTopic text="FRONT-END" />
+            <Frontend />
+
+            <TitleTopic text="MOBILE" />
+            <Mobile />
+ 
+            <TitleTopic text="BACK-END" />
+            <Backend />
         </div>
     )
 }
