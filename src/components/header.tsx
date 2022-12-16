@@ -10,7 +10,8 @@ export default function Header(){
     const [ arrowContact, setArrowContact ] = useState(false) 
     return (
         <div className="h-16 w-full my-auto text-white text-xl mt-4 max-sm:text-xs">
-            <div className="flex flex-row items-center gap-2">
+            <div className="flex w-28 flex-row items-center gap-2  hover:text-green-400 cursor-pointer
+            max-sm:w-20">
                 <List 
                     size={40} 
                     onClick={() => setMenuLayout(true)} 
