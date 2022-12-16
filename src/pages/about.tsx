@@ -31,7 +31,7 @@ export default function About() {
             max-sm:w-96 max-sm:mb-4">
                 Olá! Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu app, site ou software?
             </p>
-            {/* <div className="flex flex-row gap-16">
+            <div className="flex flex-row gap-16">
                 <p className="text-green-400 text-6xl flex flex-col justify-center items-center">
                     {yearsJob ? yearsJob - 2011 : 0} <br /> <span className="text-xs text-white"> anos de experiencia</span>
                 </p> 
@@ -41,7 +41,7 @@ export default function About() {
                 <p className="text-green-400 text-6xl flex flex-col justify-center items-center">
                     {countProject} <span className="text-xs text-white"> projetos</span>
                 </p>
-            </div> */}
+            </div>
             
             <TitleTopic text="SERVIÇOS" />
             <Services />
