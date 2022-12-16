@@ -1,5 +1,5 @@
 interface ITitleTopic {
-  text: string
+  text?: string
 }
 
 export default function TitleTopic(props: ITitleTopic) {

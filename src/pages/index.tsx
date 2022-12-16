@@ -1,8 +1,5 @@
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
-import me from '../../public/me.jpg'
-import About from './about'
 
 export default function Home() {
   return (
@@ -34,6 +31,5 @@ export default function Home() {
        </div>
       </div>
     </div>
-    
   )
 }
