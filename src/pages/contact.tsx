@@ -107,8 +107,8 @@ export default function Contact() {
           Ou vou voce pode entrar em contato comigo direto pelo
           <span className="underline">
             <Link
-              href="https://wa.me/5511981024517?text=Ola%20vamos%20sconversarr%20sobre%20seu%20projeto?"
-              className="ml-2 cursor-pointer hover:before:['go']"
+              href="https://wa.me/5511981024517?text=Ola!%20Vamos%20conversar%20sobre%20seu%20projeto?"
+              className="ml-2 cursor-pointer"
               target="_blank"
             >
               WhatsApp
