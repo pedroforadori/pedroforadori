@@ -82,7 +82,6 @@ export default function Work() {
                 <motion.div 
                     className="w-full flex justify-center items-end text-green-400 h-2/5
                     max-sm:hidden"
-                    // data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800"
                     whileHover={{y: 5}}
                     initial={{ y: 0 }}
                     animate={{ y: 5 }}

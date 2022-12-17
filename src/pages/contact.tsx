@@ -1,22 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
-import { WhatsappLogo } from "phosphor-react";
 import { FormEvent, useEffect, useState } from "react";
 import me from '../../public/assets/me.jpg'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
-import loaderGif from '../../public/assets/gif-loader.gif'
 import Loader from "../components/loader";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState(true);
   const [ emailSucess, setEmailSucess] = useState('')
   const [loader, setLoader ] = useState(false)
+  const [ imageAdjust, setImageAdjust ] = useState(300)
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if(window.innerWidth < 640){
+      setImageAdjust(200)
+    }
+  }, [])
 
   function handleSendEmail(event: FormEvent) {
     event.preventDefault();
@@ -49,18 +51,23 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col justify-center items-center w-full bg-green-500 h-screen mt-[-80px]">
-      <div className="grid grid-cols-2 gap-8 max-sm:grid-cols-1 opacity-80">
+      <div className="grid grid-cols-2 gap-8 max-sm:grid-cols-1 opacity-80 max-sm:mt-14">
         <motion.div
           initial={{ '--rotate': '0deg' } as any}
           animate={{ '--rotate': '360deg' } as any}
           transition={{ duration: 2 }}
         >
-          <Image src={me} alt="foto no chile" quality={100} width={300} className="rounded-full" style={{ transform: 'rotate(var(--rotate))' }}/>
+          <Image 
+            src={me} alt="foto no chile" 
+            quality={100} 
+            width={imageAdjust} 
+            className="rounded-full" 
+            style={{ transform: 'rotate(var(--rotate))' }}/>
         </motion.div>
         
         <form
           onSubmit={handleSendEmail}
-          className="flex flex-col gap-4 mt-4"
+          className="flex flex-col gap-4 mt-4 max-sm:mt-0"
         >
           <input
             type="text"
@@ -102,7 +109,7 @@ export default function Contact() {
         </form>
       </div>
 
-      <div className="mt-16 flex flex-col items-center gap-3 justify-center text-xl w-2/4">
+      <div className="mt-5 flex flex-col items-center gap-3 justify-center text-xl w-2/4">
         <p className="text-black">
           Ou vou voce pode entrar em contato comigo direto pelo
           <span className="underline">
