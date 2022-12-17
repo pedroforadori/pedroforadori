@@ -25,11 +25,12 @@ export default function Header(){
             </div>
             <div>
                 <motion.nav className="w-full h-screen bg-white absolute overflow-x-hidden text-6xl max-sm:justify-center p-8 z-10
-                max-sm:text-3xl
+                max-sm:text-3xl hidden
                 "
                 variants={variants}
                 animate={isOpen ? "open" : "closed"}
-            >
+                style={{display: isOpen ? 'block' : 'none'}}
+                >
                     <Link href="/" onClick={() => setIsOpen(false)}>
                         <span className="text-black">
                             <div className="flex items-center mb-6" onMouseOver={() => setArrow(true)} onMouseOut={() => setArrow(false)}>
