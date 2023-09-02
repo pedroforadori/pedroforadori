@@ -66,7 +66,7 @@ export default [
     {
         id: 4,
         project: 3,
-        logo: '/assets/mercedes.png',
+        logo: '/assets/mercedess.png',
         title: 'BANCO MERCEDES BENZ',
         description: ['Atuação no desenvolvimento de melhorias e correção de bugs nos sistemas do Banco.'],
         stack: [
