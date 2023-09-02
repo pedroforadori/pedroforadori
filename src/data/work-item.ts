@@ -1,10 +1,10 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
     {
-        id: 0,
+        id: 1,
         project: 1,
         logo: '/assets/bradesco.png',
-        title: 'BRADESCO: CARTãO DE CRéDITO',
+        title: 'BRADESCO: CARTÃO DE CRÉDITO',
         description: ['Novas funcionalidades no app do bradesco no produto cartão de crédito. Foram adicionados melhorias de layout, integração a novos serviços e criação de novos testes.'],
         stack: [
             'React Native',
@@ -23,7 +23,7 @@ export default [
         ]
     },
     {
-        id: 1,
+        id: 2,
         project: 1,
         logo: '/assets/leroy.jpg',
         title: 'LEROY MERLIN: TOTEN PARA CONSULTA DE PRODUTOS',
@@ -40,7 +40,7 @@ export default [
         ]
     },
     {
-        id: 2,
+        id: 3,
         project: 4,
         logo: '/assets/cnn.png',
         title: 'CNN BRASIL: VIAGEM E GASTRONONIA',
@@ -64,7 +64,47 @@ export default [
         ]
     },
     {
-        id: 3,
+        id: 4,
+        project: 3,
+        logo: '/assets/mercedes.png',
+        title: 'BANCO MERCEDES BENZ',
+        description: ['Atuação no desenvolvimento de melhorias e correção de bugs nos sistemas do Banco.'],
+        stack: [
+            'React Native',
+            'Angular',
+            '.NET',
+            'SQL',
+            'Jest'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Banco Mercedes Benz',
+                url: 'https://www.bancomercedes-benz.com.br/',
+            }
+            
+        ]
+    },
+    {
+        id: 5,
+        project: 1,
+        logo: '/assets/kanal.svg',
+        title: 'Kanal Open Finance',
+        description: ['Desenvolvimento da Landing Page para captação de clientes e melhoria na mesma.Inovação no produto interno.'],
+        stack: [
+            'Next.js',
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Kanal Open Finance',
+                url: 'https://kanal.com.br/',
+            }
+            
+        ]
+    },
+    {
+        id: 6,
         project: 2,
         logo: '/assets/uniasselvi.png',
         title: 'UNIASSELVI: PROVA MONITORADA',
@@ -89,7 +129,7 @@ export default [
         ]
     },
     {
-        id: 4,
+        id: 7,
         project: 1,
         logo: '/assets/movida.png',
         title: 'Movida: seminovos',
@@ -110,7 +150,7 @@ export default [
         ]
     },
     {
-        id: 5,
+        id: 8,
         project: 10,
         logo: '/assets/banco-pan.png',
         title: 'Movida: seminovos',
@@ -137,7 +177,7 @@ export default [
         ]
     },
     {
-        id: 6,
+        id: 9,
         project: 1,
         logo: '/assets/vhc.jpg',
         title: 'VHC Hospitality: Melhorias de performance',
@@ -156,7 +196,7 @@ export default [
         ]
     },
     {
-        id: 7,
+        id: 10,
         project: 3,
         logo: '/assets/linx.png',
         title: 'Linx: Farmacloud, Dashboard Vendas e Migração de Dados',
@@ -180,7 +220,7 @@ export default [
         ]
     },
     {
-        id: 8,
+        id: 11,
         project: 1,
         logo: '/assets/ouroinvest.png',
         title: 'Banco Ouroinvest: Pix',
@@ -199,7 +239,7 @@ export default [
         ]
     },
     {
-        id: 9,
+        id: 12,
         project: 2,
         logo: '/assets/obras-online.jpg',
         title: 'Obras Online: Unificação de Produtos',
@@ -222,7 +262,7 @@ export default [
         ]
     },
     {
-        id: 10,
+        id: 13,
         project: 2,
         logo: '/assets/ipsos.png',
         title: 'Ipsos: Cliente Oculto - Leroy Merlin',
@@ -244,7 +284,7 @@ export default [
         ]
     },
     {
-        id: 11,
+        id: 14,
         project: 1,
         logo: '/assets/plin.png',
         title: 'Plin: Desenvolvimento de ERP para condominios',
@@ -264,7 +304,7 @@ export default [
         ]
     },
     {
-        id: 12,
+        id: 15,
         project: 2,
         logo: '/assets/orpak.jpg',
         title: 'Orpak System: Migração de desktop para web',
