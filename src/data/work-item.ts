@@ -93,6 +93,8 @@ export default [
         description: ['Desenvolvimento mobile de novos produtos, projetos e manutenção (evolutivas + correção de bugs) no principal app da empresa.'],
         stack: [
             'React Native',
+            'Node',
+            'PostgreSQL'
         ],
         site: [
             {
