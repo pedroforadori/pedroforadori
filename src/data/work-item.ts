@@ -87,7 +87,7 @@ export default [
     },
     {
         id: 5,
-        project: 1,
+        project: 3,
         logo: '/assets/trouw.png',
         title: 'Trouw Logtech',
         description: ['Desenvolvimento mobile de novos produtos, projetos e manutenção (evolutivas + correção de bugs) no principal app da empresa.'],
