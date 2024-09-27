@@ -88,6 +88,24 @@ export default [
     {
         id: 5,
         project: 1,
+        logo: '/assets/trouw.png',
+        title: 'Trouw Logtech',
+        description: ['Desenvolvimento mobile de novos produtos, projetos e manutenção (evolutivas + correção de bugs) no principal app da empresa.'],
+        stack: [
+            'React Native',
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Trouw Logtech',
+                url: 'https://www.trouw.com.br/',
+            }
+            
+        ]
+    },
+    {
+        id: 6,
+        project: 1,
         logo: '/assets/kanal.svg',
         title: 'Kanal Open Finance',
         description: ['Desenvolvimento da Landing Page para captação de clientes e melhoria na mesma.Inovação no produto interno.'],
@@ -104,7 +122,7 @@ export default [
         ]
     },
     {
-        id: 6,
+        id: 7,
         project: 2,
         logo: '/assets/uniasselvi.png',
         title: 'UNIASSELVI: PROVA MONITORADA',
@@ -129,7 +147,7 @@ export default [
         ]
     },
     {
-        id: 7,
+        id: 8,
         project: 1,
         logo: '/assets/movida.png',
         title: 'Movida: seminovos',
@@ -150,7 +168,7 @@ export default [
         ]
     },
     {
-        id: 8,
+        id: 9,
         project: 10,
         logo: '/assets/banco-pan.png',
         title: 'Movida: seminovos',
@@ -177,7 +195,7 @@ export default [
         ]
     },
     {
-        id: 9,
+        id: 10,
         project: 1,
         logo: '/assets/vhc.jpg',
         title: 'VHC Hospitality: Melhorias de performance',
@@ -196,7 +214,7 @@ export default [
         ]
     },
     {
-        id: 10,
+        id: 11,
         project: 3,
         logo: '/assets/linx.png',
         title: 'Linx: Farmacloud, Dashboard Vendas e Migração de Dados',
@@ -220,7 +238,7 @@ export default [
         ]
     },
     {
-        id: 11,
+        id: 12,
         project: 1,
         logo: '/assets/ouroinvest.png',
         title: 'Banco Ouroinvest: Pix',
@@ -239,7 +257,7 @@ export default [
         ]
     },
     {
-        id: 12,
+        id: 13,
         project: 2,
         logo: '/assets/obras-online.jpg',
         title: 'Obras Online: Unificação de Produtos',
@@ -262,7 +280,7 @@ export default [
         ]
     },
     {
-        id: 13,
+        id: 14,
         project: 2,
         logo: '/assets/ipsos.png',
         title: 'Ipsos: Cliente Oculto - Leroy Merlin',
@@ -284,7 +302,7 @@ export default [
         ]
     },
     {
-        id: 14,
+        id: 15,
         project: 1,
         logo: '/assets/plin.png',
         title: 'Plin: Desenvolvimento de ERP para condominios',
@@ -304,7 +322,7 @@ export default [
         ]
     },
     {
-        id: 15,
+        id: 16,
         project: 2,
         logo: '/assets/orpak.jpg',
         title: 'Orpak System: Migração de desktop para web',
