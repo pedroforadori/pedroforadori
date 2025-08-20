@@ -29,7 +29,7 @@ export default function About() {
         <div className="text-white flex flex-col justify-center items-center gap-4">
             <p className="w-2/3 text-xl mb-16 mt-4
             max-sm:w-96 max-sm:mb-4">
-                Olá! Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu app, site ou software?
+                Olá! Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu projeto?
             </p>
             <div className="flex flex-row gap-16 mb-24">
                 <p className="text-green-400 text-6xl flex flex-col justify-center items-center">
