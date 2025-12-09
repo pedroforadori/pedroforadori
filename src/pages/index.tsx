@@ -11,9 +11,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div id="work-section"><Work /></div>
-      <div id="about-section"><About /></div>
-      <div id="contact-section"><Contact /></div>
+      <div id="work-section">
+        <Work />
+      </div>
+      <div id="about-section">
+        <About />
+      </div>
+      <div id="contact-section">
+        <Contact />
+      </div>
       <ScrollArrow isAtBottom={isAtBottom} />
     </>
   )
