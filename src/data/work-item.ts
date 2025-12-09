@@ -19,7 +19,7 @@ export default [
                 title: 'Bradesco Cartões',
                 url: 'https://banco.bradesco/html/classic/index.shtm',
             }
-            
+
         ]
     },
     {
@@ -82,19 +82,21 @@ export default [
                 title: 'Banco Mercedes Benz',
                 url: 'https://www.bancomercedes-benz.com.br/',
             }
-            
+
         ]
     },
     {
         id: 5,
-        project: 3,
+        project: 5,
         logo: '/assets/trouw.png',
         title: 'Trouw Logtech',
         description: ['Desenvolvimento mobile de novos produtos, projetos e manutenção (evolutivas + correção de bugs) no principal app da empresa.'],
         stack: [
             'React Native',
             'Node',
-            'PostgreSQL'
+            'PostgreSQL',
+            'PHP',
+            'Jest'
         ],
         site: [
             {
@@ -102,7 +104,7 @@ export default [
                 title: 'Trouw Logtech',
                 url: 'https://www.trouw.com.br/',
             }
-            
+
         ]
     },
     {
@@ -120,7 +122,7 @@ export default [
                 title: 'Kanal Open Finance',
                 url: 'https://kanal.com.br/',
             }
-            
+
         ]
     },
     {
