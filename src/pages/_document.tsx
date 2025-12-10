@@ -22,10 +22,10 @@ export default function Document() {
                     />
                     Your browser does not support the video tag.
                 </video> */}
-                <div className="relative z-10">
-                    <Main />
-                    <NextScript />
-                </div>
+                {/* <div className="relative z-10"> */}
+                <Main />
+                <NextScript />
+                {/* </div> */}
             </body>
         </Html>
     )
