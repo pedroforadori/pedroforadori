@@ -23,7 +23,6 @@ function AppContent({ Component, pageProps }: AppProps) {
       )}
 
       <div className={`flex w-full px-4 justify-end max-sm:px-0`}>
-        {/* <Header /> */}
         <Social />
       </div>
 

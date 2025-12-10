@@ -4,9 +4,11 @@ import useIsAtBottom from '../hooks/useIsAtBottom'
 import Work from '../components/work'
 import About from '../components/about'
 import Contact from '../components/contact'
+import { useLoading } from '../contexts/LoadingContentContext'
 
 export default function Home() {
   const isAtBottom = useIsAtBottom()
+  const { isLoading } = useLoading()
 
   return (
     <>
@@ -20,7 +22,10 @@ export default function Home() {
       <div id="contact-section">
         <Contact />
       </div>
-      <ScrollArrow isAtBottom={isAtBottom} />
+      {isLoading ? null : (
+        <ScrollArrow isAtBottom={isAtBottom} />
+      )}
+
     </>
   )
 }
