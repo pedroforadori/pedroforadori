@@ -36,6 +36,7 @@ export default function BackgroundMedia({
   }, [])
 
   useEffect(() => {
+    console.log('isMobile:', isMobile)
     if (isMobile) return
     const v = videoRef.current
     if (!v) return
