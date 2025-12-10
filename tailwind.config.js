@@ -9,8 +9,7 @@ module.exports = {
         sans: 'Jost, sans-serif'
       },
       backgroundImage: {
-        app: 'url(/assets/bg_video.mp4)',
-        'app-mobile': 'url(/assets/bg.jpg)'
+        app: 'url(/assets/bg.jpg)',
       },
       backgroundSize: {
         '50%': '50%',

@@ -26,7 +26,7 @@ export default function About() {
     }, [])
 
     return (
-        <div className="text-white flex flex-col justify-center items-center gap-4">
+        <div className="w-full text-white flex flex-col justify-center items-center gap-4">
             {/* <p className="w-2/3 text-xl mb-16 mt-4
             max-sm:w-96 max-sm:mb-4">
                 Olá! Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu projeto?
