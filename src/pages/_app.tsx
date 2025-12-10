@@ -13,7 +13,7 @@ function AppContent({ Component, pageProps }: AppProps) {
         <title>Pedro Foradori</title>
       </Head>
 
-      {isLoading && (
+      {/* {isLoading && (
         <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center gap-4">
           <div className="border-4 border-gray-700 border-t-green-500 rounded-full w-12 h-12 animate-spin"></div>
           <p className="text-white text-sm tracking-widest font-jost">
@@ -24,7 +24,7 @@ function AppContent({ Component, pageProps }: AppProps) {
 
       <div className={`flex w-full px-4 justify-end max-sm:px-0`}>
         <Social />
-      </div>
+      </div> */}
 
       <Component {...pageProps} />
     </>
