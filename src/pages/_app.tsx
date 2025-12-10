@@ -1,25 +1,32 @@
 import "aos/dist/aos.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { LoadingContentProvider } from "../contexts/LoadingContentContext";
+import { LoadingContentProvider, useLoading } from "../contexts/LoadingContentContext";
 import "../styles/global.css";
 import Social from "../components/social";
 
 function AppContent({ Component, pageProps }: AppProps) {
+  const { isLoading } = useLoading()
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Pedro Foradori - Desenvolvedor de Software, App e Sites"
-        />
         <title>Pedro Foradori</title>
       </Head>
+
+      {isLoading && (
+        <div className="fixed inset-0 bg-black z-50 flex flex-col items-center justify-center gap-4">
+          <div className="border-4 border-gray-700 border-t-green-500 rounded-full w-12 h-12 animate-spin"></div>
+          <p className="text-white text-sm tracking-widest font-jost">
+            CARREGANDO...
+          </p>
+        </div>
+      )}
+
       <div className={`flex w-full px-4 justify-end max-sm:px-0`}>
+        {/* <Header /> */}
         <Social />
       </div>
+
       <Component {...pageProps} />
     </>
   );

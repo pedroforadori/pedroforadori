@@ -22,7 +22,7 @@ export function Hero() {
                     animate={{ y: 0 }}
                 >
                     <span className="whitespace-pre-wrap leading-tight science-gothic text-justify">
-                        {displayedText}
+                        {isLoading ? '' : displayedText}
                         <span className="inline-block ml-1 animate-pulse">|</span>
                     </span>
                 </motion.p>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AOS from 'aos'
 import workItem from "../data/work-item";
-import TitleTopic from "./title-topic";
+import TitleTopic from "./titleTopic";
 import Services from "./services";
 import Frontend from "./frontend";
 import Mobile from "./mobile";

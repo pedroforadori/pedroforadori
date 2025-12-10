@@ -10,7 +10,7 @@ export default function Document() {
                 <meta name="google-site-verification" content="W0WmtRA-gm0pS7uMe-7rwmipfegkYjBHHYCdd0BuwOk" />
                 <link rel="shortcut icon" href="/assets/beer.ico" />
             </Head>
-            <body className="bg-app h-screen bg-cover bg-center bg-no-repeat bg-fixed overflow-x-hidden">
+            <body className="bg-app h-screen bg-cover bg-center bg-no-repeat bg-fixed overflow-x-hidden bg-black">
                 <video preload="metadata" autoPlay muted loop className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none">
                     <source src="/assets/bg_video.mp4" type="video/mp4" />
                     <track
