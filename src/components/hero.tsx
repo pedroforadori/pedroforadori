@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTypeWriter } from '../hooks/useTypeWriter'
 import { useLoading } from '../contexts/LoadingContentContext'
+import Image from 'next/image'
 
 const HERO_LINES = [
     'PEDRO FORADORI DESENVOLVEDOR WEB E MOBILE',
@@ -14,8 +15,15 @@ export function Hero() {
     const displayedText = useTypeWriter(HERO_LINES, CHAR_DELAY, BETWEEN_LINES_DELAY)
 
     return (
-        <div className="flex flex-col max-sm:p-2">
-            <div className="text-white h-screen text-5xl flex flex-col justify-center items-center w-full px-4">
+        <div className="h-screen flex flex-col justify-center items-center max-sm:p-2">
+            <Image 
+                src="/assets/bg.jpg" 
+                alt="Hero" 
+                fill 
+                className="object-cover object-center fixed -z-10" 
+                priority    
+            />
+            <div className="text-white text-5xl flex flex-col justify-center items-center w-full px-4">
                 <motion.p
                     className="w-2/3 max-2xl:text-5xl max-lg:text-2xl max-sm:text-lg max-sm:w-full text-center"
                     initial={{ y: 10 }}

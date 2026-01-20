@@ -36,8 +36,8 @@ export default function Work() {
     return (
         <div className="overflow-hidden w-full items-center justify-center">
             <div className="flex flex-col items-center mx-auto 
-            max-lg:h-[90vh]
-            max-sm:h-auto max-sm:my-8">
+                            max-lg:h-[90vh]
+                            max-sm:h-auto max-sm:my-8">
                 <motion.div
                     className="fixed top-0 left-0 right-0 h-[10px] bg-green-500 origin-left"
                     style={{ scaleX: scrollYProgress }}

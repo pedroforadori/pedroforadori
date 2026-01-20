@@ -22,7 +22,7 @@ function AppContent({ Component, pageProps }: AppProps) {
         </div>
       )}
 
-      <div className={`flex w-full px-4 justify-end max-sm:px-0`}>
+      <div className={`fixed top-4 right-4 flex px-4 justify-end max-sm:px-0`}>
         <Social />
       </div>
 
