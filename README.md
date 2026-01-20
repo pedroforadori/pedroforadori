@@ -167,6 +167,7 @@ Olá, me chamo Pedro Luis Foradori Filho, profissional graduado em Tecnologia em
 <br />
 
 ### Banco de dados
+
 <img 
     align="left" 
     alt="MySQL" 
@@ -235,7 +236,7 @@ Olá, me chamo Pedro Luis Foradori Filho, profissional graduado em Tecnologia em
     title="Jest"
     width="30px" 
     style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-original.svg" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" 
 />
 <img 
     align="left" 
