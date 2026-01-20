@@ -319,6 +319,6 @@ Olá, me chamo Pedro Luis Foradori Filho, profissional graduado em Tecnologia em
     alt="GitHub Stats" 
     height="165" 
     style="padding-left: 10px;" 
-    src="https://github-readme-stats.vercel.app/api?username=pedroforadori&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br" 
+    src="https://github-readme-stats.vercel.app/api?username=pedroforadori&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br&v=2" 
   />
 </p>
