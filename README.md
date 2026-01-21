@@ -275,6 +275,14 @@ Olá, me chamo Pedro Luis Foradori Filho, profissional graduado em Tecnologia em
 <br/>
 
 ### Labs
+<img 
+    align="left" 
+    alt="Vue" 
+    title="Vue"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" 
+/>
 
 <img 
     align="left" 
