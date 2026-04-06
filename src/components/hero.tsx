@@ -16,13 +16,13 @@ export function Hero() {
 
     return (
         <div className="h-screen flex flex-col justify-center items-center max-sm:p-2">
-            <Image 
+            {/* <Image 
                 src="/assets/bg.jpg" 
                 alt="Hero" 
                 fill 
                 className="object-cover object-center fixed -z-10" 
                 priority    
-            />
+            /> */}
             <div className="text-white text-5xl flex flex-col justify-center items-center w-full px-4">
                 <motion.p
                     className="w-2/3 max-2xl:text-5xl max-lg:text-2xl max-sm:text-lg max-sm:w-full text-center"
