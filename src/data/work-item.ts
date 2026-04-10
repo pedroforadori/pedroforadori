@@ -1,6 +1,29 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
     {
+        id: 0,
+        project: 1,
+        logo: '/assets/bitone.svg',
+        title: 'Bit One',
+        description: ['Novo produto MVP desenvolvido para testes de usabilidade e validação de mercado.'],
+        stack: [
+            'React',
+            'Tailwind CSS',
+            'Radix UI',
+            'Node.js',
+            'POSTGRESQL',
+            'Jest'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Bitone',
+                url: 'https://app-bitone.vercel.app/',
+            }
+
+        ]
+    },
+    {
         id: 1,
         project: 1,
         logo: '/assets/bradesco.png',
