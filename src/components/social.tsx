@@ -7,7 +7,7 @@ export default function Social() {
       <Link
         href="https://github.com/pedroforadori"
         target="_blank"
-        className="hover:text-green-700"
+        className="hover:text-green-500"
       >
         <GithubLogo size={32} />
       </Link>
@@ -15,7 +15,7 @@ export default function Social() {
       <Link
         href="https://www.linkedin.com/in/pedro-foradori-3050a78a/"
         target="_blank"
-        className="hover:text-green-700"
+        className="hover:text-green-500"
       >
         <LinkedinLogo size={32} />
       </Link>
@@ -23,14 +23,14 @@ export default function Social() {
       <Link
         href="https://www.instagram.com/pedroforadori/"
         target="_blank"
-        className="hover:text-green-700"
+        className="hover:text-green-500"
       >
         <InstagramLogo size={32} />
       </Link>
 
       <Link
         href="/contact"
-        className="hover:text-green-700"
+        className="hover:text-green-500"
       >
         <At size={32} />
       </Link>

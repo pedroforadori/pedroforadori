@@ -4,7 +4,8 @@
 
 body {
     -webkit-font-smoothing: antialiased;
-    background: #323238;
+    background: #141414;
+    color: #fff;
 }
 
 #root {
@@ -66,4 +67,32 @@ input:required{
 /* utilitária para aplicar onde quiser */
 .science-gothic {
   font-family: 'Science Gothic', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* faixa de texto gigante deslizando (Marquee) */
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* indicador de rolagem do hero: traço descendo dentro de uma linha fina */
+.scroll-line {
+  animation: scroll-line 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scroll-line {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-line { animation: none; }
 }

@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Jost, sans-serif'
+        sans: ['Montserrat', 'sans-serif'],
+        display: ['Oswald', 'sans-serif'],
       },
       backgroundImage: {
         app: 'url(/assets/bg.jpg)',
@@ -25,6 +26,17 @@ module.exports = {
           600: "#323238",
           800: "#202024",
           900: "#121214"
+        },
+        // verde da marca (substitui o roxo da referência)
+        green: {
+          300: "#8FE3B4",
+          400: "#5ED492",
+          500: "#2FBF71",
+          700: "#1F8A50",
+        },
+        ink: {
+          800: "#1C1C1C",
+          900: "#141414",
         },
         ignite: {
           100: "#E1E1E6",

@@ -1,15 +1,9 @@
 import { Hero } from '../components/hero'
-import { ScrollArrow } from '../components/scrollArrow'
-import useIsAtBottom from '../hooks/useIsAtBottom'
 import Work from '../components/work'
 import About from '../components/about'
 import Contact from '../components/contact'
-import { useLoading } from '../contexts/LoadingContentContext'
 
 export default function Home() {
-  const isAtBottom = useIsAtBottom()
-  const { isLoading } = useLoading()
-
   return (
     <>
       <Hero />
@@ -22,10 +16,6 @@ export default function Home() {
       <div id="contact-section">
         <Contact />
       </div>
-      {isLoading ? null : (
-        <ScrollArrow isAtBottom={isAtBottom} />
-      )}
-
     </>
   )
 }

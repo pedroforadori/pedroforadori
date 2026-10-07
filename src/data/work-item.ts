@@ -1,6 +1,28 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
     {
+        id: 17,
+        project: 1,
+        logo: '/assets/abc-brasil.svg',
+        title: 'Banco ABC Brasil: App de Internet Banking',
+        description: ['Desenvolvimento e evolução do app de internet banking do Banco ABC Brasil, incluindo módulos de Open Finance, biometria, onboarding e FGTS.'],
+        stack: [
+            'React Native',
+            'TypeScript',
+            'Redux Saga',
+            'Styled Components',
+            'Jest'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Banco ABC Brasil',
+                url: 'https://www.abcbrasil.com.br/',
+            }
+
+        ]
+    },
+    {
         id: 0,
         project: 1,
         logo: '/assets/bitone.svg',
@@ -27,7 +49,7 @@ export default [
         id: 1,
         project: 1,
         logo: '/assets/bradesco.png',
-        title: 'BRADESCO: CARTÃO DE CRÉDITO',
+        title: 'Bradesco: Cartão de crédito',
         description: ['Novas funcionalidades no app do bradesco no produto cartão de crédito. Foram adicionados melhorias de layout, integração a novos serviços e criação de novos testes.'],
         stack: [
             'React Native',
@@ -49,7 +71,7 @@ export default [
         id: 2,
         project: 1,
         logo: '/assets/leroy.jpg',
-        title: 'LEROY MERLIN: TOTEN PARA CONSULTA DE PRODUTOS',
+        title: 'Leroy Merlin: Totem para consulta de produtos',
         description: ['Desenvolvimento de novo produto, sendo um toten para consulta de valor e estoque do item desejado.'],
         stack: [
             'React Native'
@@ -66,7 +88,7 @@ export default [
         id: 3,
         project: 4,
         logo: '/assets/cnn.png',
-        title: 'CNN BRASIL: VIAGEM E GASTRONONIA',
+        title: 'CNN Brasil: Viagem e gastronomia',
         description: [
             'Desenvolvimento de novo layout para o subsite da CNN Brasil Viagem e Gastronomia.',
             'Inicio do planejamento e desenvolvimento do site principal.',
@@ -90,7 +112,7 @@ export default [
         id: 4,
         project: 3,
         logo: '/assets/mercedess.png',
-        title: 'BANCO MERCEDES BENZ',
+        title: 'Banco Mercedes-Benz',
         description: ['Atuação no desenvolvimento de melhorias e correção de bugs nos sistemas do Banco.'],
         stack: [
             'React Native',
@@ -152,7 +174,7 @@ export default [
         id: 7,
         project: 2,
         logo: '/assets/uniasselvi.png',
-        title: 'UNIASSELVI: PROVA MONITORADA',
+        title: 'Uniasselvi: Prova monitorada',
         description: [
             'Responsável pelo produto prova supervisionada',
             'O que é?',

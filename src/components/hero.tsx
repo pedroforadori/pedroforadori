@@ -1,40 +1,55 @@
 import { motion } from 'framer-motion'
-import { useTypeWriter } from '../hooks/useTypeWriter'
 import { useLoading } from '../contexts/LoadingContentContext'
-import Image from 'next/image'
-
-const HERO_LINES = [
-    'PEDRO FORADORI DESENVOLVEDOR WEB E MOBILE',
-    'VEJA MEUS PROJETOS E SKILLS ROLANDO O SITE PRA BAIXO',
-]
-const CHAR_DELAY = 190
-const BETWEEN_LINES_DELAY = 190
 
 export function Hero() {
     const { isLoading } = useLoading()
-    const displayedText = useTypeWriter(HERO_LINES, CHAR_DELAY, BETWEEN_LINES_DELAY)
 
     return (
-        <div className="h-screen flex flex-col justify-center items-center max-sm:p-2">
-            {/* <Image 
-                src="/assets/bg.jpg" 
-                alt="Hero" 
-                fill 
-                className="object-cover object-center fixed -z-10" 
-                priority    
-            /> */}
-            <div className="text-white text-5xl flex flex-col justify-center items-center w-full px-4">
-                <motion.p
-                    className="w-2/3 max-2xl:text-5xl max-lg:text-2xl max-sm:text-lg max-sm:w-full text-center"
-                    initial={{ y: 10 }}
-                    animate={{ y: 0 }}
+        <section className="relative h-screen w-full overflow-hidden bg-ink-900">
+            {/* foto em P&B com bordas esmaecendo para o fundo */}
+            <div
+                className="absolute left-1/2 top-0 h-full aspect-square -translate-x-1/2 bg-cover bg-center grayscale opacity-60"
+                style={{
+                    backgroundImage: 'url(/assets/pedro.jpg)',
+                    maskImage: 'radial-gradient(ellipse 60% 70% at 50% 40%, #000 35%, transparent 75%)',
+                    WebkitMaskImage: 'radial-gradient(ellipse 60% 70% at 50% 40%, #000 35%, transparent 75%)',
+                }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-ink-900/30 via-ink-900/20 to-ink-900" />
+
+            <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pt-16 text-center">
+                <motion.h1
+                    className="font-extrabold uppercase leading-[0.9] tracking-tight text-white/20 mix-blend-screen
+                    text-[clamp(3rem,11vw,9.5rem)]"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isLoading ? {} : { opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
                 >
-                    <span className="whitespace-pre-wrap leading-tight science-gothic text-justify">
-                        {isLoading ? '' : displayedText}
-                        <span className="inline-block ml-1 animate-pulse">|</span>
-                    </span>
+                    Pedro<br />Foradori
+                </motion.h1>
+
+                <motion.p
+                    className="mt-8 max-w-2xl text-2xl font-semibold leading-snug text-white max-sm:text-lg"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isLoading ? {} : { opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.4 }}
+                >
+                    Desenvolvedor Web e Mobile criando produtos digitais
+                    com <span className="text-green-500">React</span>,{' '}
+                    <span className="text-green-500">Next.js</span> e{' '}
+                    <span className="text-green-500">React Native</span>
                 </motion.p>
             </div>
-        </div>
+            {/* indicador de rolagem: linha fina com um traço verde descendo */}
+            <a
+                href="#work-section"
+                aria-label="Rolar para os projetos"
+                className="absolute bottom-[10%] right-[5%] z-20 flex h-40 w-6 justify-center max-sm:hidden"
+            >
+                <span className="relative h-full w-px overflow-hidden bg-white/10">
+                    <span className="scroll-line absolute inset-0 bg-green-500" />
+                </span>
+            </a>
+        </section>
     )
 }
