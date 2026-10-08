@@ -47,7 +47,7 @@ export default function Work() {
 
             <div className="mx-auto mt-16 max-w-3xl px-6 text-center" data-aos="fade-up" data-aos-duration="1000">
                 <p className="text-sm font-semibold text-green-500">
-                    Projetos e empresas onde atuei como consultor
+                    Projetos e empresas onde atuei
                 </p>
                 <h2 className="mt-3 text-4xl font-bold leading-tight text-white max-sm:text-2xl">
                     Ao longo dos anos, trabalhei com pessoas e empresas incríveis em projetos desafiadores

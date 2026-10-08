@@ -1,51 +1,6 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
     {
-        id: 17,
-        project: 1,
-        logo: '/assets/abc-brasil.svg',
-        title: 'Banco ABC Brasil: App de Internet Banking',
-        description: ['Desenvolvimento e evolução do app de internet banking do Banco ABC Brasil, incluindo módulos de Open Finance, biometria, onboarding e FGTS.'],
-        stack: [
-            'React Native',
-            'TypeScript',
-            'Redux Saga',
-            'Styled Components',
-            'Jest'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Banco ABC Brasil',
-                url: 'https://www.abcbrasil.com.br/',
-            }
-
-        ]
-    },
-    {
-        id: 0,
-        project: 1,
-        logo: '/assets/bitone.svg',
-        title: 'Bit One',
-        description: ['Novo produto MVP desenvolvido para testes de usabilidade e validação de mercado.'],
-        stack: [
-            'React',
-            'Tailwind CSS',
-            'Radix UI',
-            'Node.js',
-            'POSTGRESQL',
-            'Jest'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Bitone',
-                url: 'https://app-bitone.vercel.app/',
-            }
-
-        ]
-    },
-    {
         id: 1,
         project: 1,
         logo: '/assets/bradesco.png',
@@ -68,20 +23,25 @@ export default [
         ]
     },
     {
-        id: 2,
-        project: 1,
-        logo: '/assets/leroy.jpg',
-        title: 'Leroy Merlin: Totem para consulta de produtos',
-        description: ['Desenvolvimento de novo produto, sendo um toten para consulta de valor e estoque do item desejado.'],
+        id: 4,
+        project: 3,
+        logo: '/assets/mercedess.png',
+        title: 'Banco Mercedes-Benz',
+        description: ['Atuação no desenvolvimento de melhorias e correção de bugs nos sistemas do Banco.'],
         stack: [
-            'React Native'
+            'React Native',
+            'Angular',
+            '.NET',
+            'SQL',
+            'Jest'
         ],
         site: [
             {
                 id: 0,
-                title: 'Leroy Merlin',
-                url: 'https://www.leroymerlin.com.br/',
+                title: 'Banco Mercedes Benz',
+                url: 'https://www.bancomercedes-benz.com.br/',
             }
+
         ]
     },
     {
@@ -109,65 +69,47 @@ export default [
         ]
     },
     {
-        id: 4,
-        project: 3,
-        logo: '/assets/mercedess.png',
-        title: 'Banco Mercedes-Benz',
-        description: ['Atuação no desenvolvimento de melhorias e correção de bugs nos sistemas do Banco.'],
-        stack: [
-            'React Native',
-            'Angular',
-            '.NET',
-            'SQL',
-            'Jest'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Banco Mercedes Benz',
-                url: 'https://www.bancomercedes-benz.com.br/',
-            }
-
-        ]
-    },
-    {
-        id: 5,
-        project: 5,
-        logo: '/assets/trouw.png',
-        title: 'Trouw Logtech',
-        description: ['Desenvolvimento mobile de novos produtos, projetos e manutenção (evolutivas + correção de bugs) no principal app da empresa.'],
-        stack: [
-            'React Native',
-            'Node',
-            'PostgreSQL',
-            'PHP',
-            'Jest'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Trouw Logtech',
-                url: 'https://www.trouw.com.br/',
-            }
-
-        ]
-    },
-    {
-        id: 6,
+        id: 2,
         project: 1,
-        logo: '/assets/kanal.svg',
-        title: 'Kanal Open Finance',
-        description: ['Desenvolvimento da Landing Page para captação de clientes e melhoria na mesma.Inovação no produto interno.'],
+        logo: '/assets/leroy.jpg',
+        title: 'Leroy Merlin: Totem para consulta de produtos',
+        description: ['Desenvolvimento de novo produto, sendo um toten para consulta de valor e estoque do item desejado.'],
         stack: [
-            'Next.js',
+            'React Native'
         ],
         site: [
             {
                 id: 0,
-                title: 'Kanal Open Finance',
-                url: 'https://kanal.com.br/',
+                title: 'Leroy Merlin',
+                url: 'https://www.leroymerlin.com.br/',
             }
-
+        ]
+    },
+    {
+        id: 9,
+        project: 10,
+        logo: '/assets/banco-pan.png',
+        title: 'Movida: seminovos',
+        description: [
+            'Desenvolvimento de projetos internos. Para as areas:',
+            'Cartões, ouvidoria, juridico e compliance.'
+        ],
+        stack: [
+            '.Net',
+            'Jquery',
+            'Angular.js',
+            'Php',
+            'ASP',
+            'Java',
+            'SQL Server',
+            'Oracle'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Banco Pan',
+                url: 'https://www.bancopan.com.br/',
+            }
         ]
     },
     {
@@ -217,52 +159,6 @@ export default [
         ]
     },
     {
-        id: 9,
-        project: 10,
-        logo: '/assets/banco-pan.png',
-        title: 'Movida: seminovos',
-        description: [
-            'Desenvolvimento de projetos internos. Para as areas:',
-            'Cartões, ouvidoria, juridico e compliance.'
-        ],
-        stack: [
-            '.Net',
-            'Jquery',
-            'Angular.js',
-            'Php',
-            'ASP',
-            'Java',
-            'SQL Server',
-            'Oracle'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Banco Pan',
-                url: 'https://www.bancopan.com.br/',
-            }
-        ]
-    },
-    {
-        id: 10,
-        project: 1,
-        logo: '/assets/vhc.jpg',
-        title: 'VHC Hospitality: Melhorias de performance',
-        description: [
-            '"Air Bnb" de casas de luxo'
-        ],
-        stack: [
-            'Angular'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'VHC Hospitality',
-                url: 'https://www.experiencekissimmee.com/',
-            }
-        ]
-    },
-    {
         id: 11,
         project: 3,
         logo: '/assets/linx.png',
@@ -283,48 +179,6 @@ export default [
                 id: 0,
                 title: 'Linx',
                 url: 'https://www.linx.com.br/',
-            }
-        ]
-    },
-    {
-        id: 12,
-        project: 1,
-        logo: '/assets/ouroinvest.png',
-        title: 'Banco Ouroinvest: Pix',
-        description: [
-            'Primeira versão do app com integração ao PIX, publicado nas lojas: Apple Store e Play Store.',
-        ],
-        stack: [
-            'React Native'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Ourinvest',
-                url: 'https://www.ourinvest.com.br/',
-            }
-        ]
-    },
-    {
-        id: 13,
-        project: 2,
-        logo: '/assets/obras-online.jpg',
-        title: 'Obras Online: Unificação de Produtos',
-        description: [
-            'Unificar dois produtos, extraindo o melhor de cada um deles.',
-            'Correções de bus e melhorias no legado.',
-        ],
-        stack: [
-            '.Net',
-            'Worpress',
-            'Angular.js',
-            'SQL Server'
-        ],
-        site: [
-            {
-                id: 0,
-                title: 'Obras Online',
-                url: 'https://obrasonline.com.br/',
             }
         ]
     },
@@ -351,23 +205,25 @@ export default [
         ]
     },
     {
-        id: 15,
+        id: 17,
         project: 1,
-        logo: '/assets/plin.png',
-        title: 'Plin: Desenvolvimento de ERP para condominios',
-        description: [
-            'Software de gestão condominial.',
-        ],
+        logo: '/assets/abc-brasil.svg',
+        title: 'Banco ABC Brasil: App de Internet Banking',
+        description: ['Desenvolvimento e evolução do app de internet banking do Banco ABC Brasil, incluindo módulos de Open Finance, biometria, onboarding e FGTS.'],
         stack: [
-            'React',
-            'Typescript'
+            'React Native',
+            'TypeScript',
+            'Redux Saga',
+            'Styled Components',
+            'Jest'
         ],
         site: [
             {
                 id: 0,
-                title: 'Orpak System',
-                url: 'https://www.plincondominios.com.br/',
+                title: 'Banco ABC Brasil',
+                url: 'https://www.abcbrasil.com.br/',
             }
+
         ]
     },
     {
@@ -392,4 +248,171 @@ export default [
             }
         ]
     },
+    {
+        id: 12,
+        project: 1,
+        logo: '/assets/ouroinvest.png',
+        title: 'Banco Ouroinvest: Pix',
+        description: [
+            'Primeira versão do app com integração ao PIX, publicado nas lojas: Apple Store e Play Store.',
+        ],
+        stack: [
+            'React Native'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Ourinvest',
+                url: 'https://www.ourinvest.com.br/',
+            }
+        ]
+    },
+    {
+        id: 10,
+        project: 1,
+        logo: '/assets/vhc.jpg',
+        title: 'VHC Hospitality: Melhorias de performance',
+        description: [
+            '"Air Bnb" de casas de luxo'
+        ],
+        stack: [
+            'Angular'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'VHC Hospitality',
+                url: 'https://www.experiencekissimmee.com/',
+            }
+        ]
+    },
+    {
+        id: 6,
+        project: 1,
+        logo: '/assets/kanal.svg',
+        title: 'Kanal Open Finance',
+        description: ['Desenvolvimento da Landing Page para captação de clientes e melhoria na mesma.Inovação no produto interno.'],
+        stack: [
+            'Next.js',
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Kanal Open Finance',
+                url: 'https://kanal.com.br/',
+            }
+
+        ]
+    },
+    {
+        id: 5,
+        project: 5,
+        logo: '/assets/trouw.png',
+        title: 'Trouw Logtech',
+        description: ['Desenvolvimento mobile de novos produtos, projetos e manutenção (evolutivas + correção de bugs) no principal app da empresa.'],
+        stack: [
+            'React Native',
+            'Node',
+            'PostgreSQL',
+            'PHP',
+            'Jest'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Trouw Logtech',
+                url: 'https://www.trouw.com.br/',
+            }
+
+        ]
+    },
+    {
+        id: 13,
+        project: 2,
+        logo: '/assets/obras-online.jpg',
+        title: 'Obras Online: Unificação de Produtos',
+        description: [
+            'Unificar dois produtos, extraindo o melhor de cada um deles.',
+            'Correções de bus e melhorias no legado.',
+        ],
+        stack: [
+            '.Net',
+            'Worpress',
+            'Angular.js',
+            'SQL Server'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Obras Online',
+                url: 'https://obrasonline.com.br/',
+            }
+        ]
+    },
+    {
+        id: 15,
+        project: 1,
+        logo: '/assets/plin.png',
+        title: 'Plin: Desenvolvimento de ERP para condominios',
+        description: [
+            'Software de gestão condominial.',
+        ],
+        stack: [
+            'React',
+            'Typescript'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Orpak System',
+                url: 'https://www.plincondominios.com.br/',
+            }
+        ]
+    },
+    {
+        id: 18,
+        project: 1,
+        logo: '/assets/penne.png',
+        title: 'Penne: Sites de casamento personalizados',
+        description: ['Sites de casamento sob medida, com convite digital, confirmação de presença e lista de presentes. O portfólio reúne os sites de cada casal e conta com um painel administrativo protegido para cadastrar novos cases.'],
+        stack: [
+            'Next.js',
+            'React',
+            'TypeScript',
+            'Tailwind CSS',
+            'MDX',
+            'Vercel Blob'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Penne Casamentos',
+                url: 'https://www.pennecasamentos.com.br/',
+            }
+
+        ]
+    },
+    {
+        id: 0,
+        project: 1,
+        logo: '/assets/bitone.svg',
+        title: 'Bit One',
+        description: ['Novo produto MVP desenvolvido para testes de usabilidade e validação de mercado.'],
+        stack: [
+            'React',
+            'Tailwind CSS',
+            'Radix UI',
+            'Node.js',
+            'POSTGRESQL',
+            'Jest'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Bitone',
+                url: 'https://app-bitone.vercel.app/',
+            }
+
+        ]
+    }
 ]
