@@ -4,6 +4,9 @@ import { DownloadSimple } from "phosphor-react";
 import { useEffect, useState } from "react";
 import Social from "./social";
 
+const GREEN_SECTION_ID = 'contact-section'
+const HEADER_PROBE_Y = 40 // meio do header
+
 const CV_URL = '/files/pedro-foradori-cv.pdf'
 const CV_FILENAME = 'Pedro Foradori - CV.pdf'
 
@@ -17,10 +20,16 @@ const MENU_ITEMS = [
 export default function SiteHeader() {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const [onGreen, setOnGreen] = useState(false)
 
-    // depois do topo, o header ganha fundo para não brigar com o conteúdo que passa por baixo
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 10)
+        const onScroll = () => {
+            // no celular, depois do topo, o header ganha fundo para não brigar com o conteúdo
+            setScrolled(window.scrollY > 10)
+            // sobre a seção verde de contato, as cores do header escurecem para continuar legíveis
+            const contact = document.getElementById(GREEN_SECTION_ID)?.getBoundingClientRect()
+            setOnGreen(!!contact && contact.top <= HEADER_PROBE_Y && contact.bottom >= HEADER_PROBE_Y)
+        }
         onScroll()
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
@@ -32,17 +41,19 @@ export default function SiteHeader() {
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-10 py-6 transition-colors duration-300 max-sm:px-5 max-sm:py-4 ${scrolled ? 'bg-ink-900/80 backdrop-blur-md' : ''}`}>
+            <header className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-10 py-6 transition-colors duration-300 max-sm:px-5 max-sm:py-4 ${scrolled && !onGreen ? 'max-sm:bg-ink-900/80 max-sm:backdrop-blur-md' : ''}`}>
                 <Link href="/" className="font-display uppercase text-4xl leading-none tracking-tight max-sm:text-2xl">
-                    <span className="text-green-500">Pedro</span>{' '}
-                    <span className="text-green-700">Foradori</span>
+                    <span className={`transition-colors duration-300 ${onGreen ? 'text-ink-900' : 'text-green-500'}`}>Pedro</span>{' '}
+                    <span className={`transition-colors duration-300 ${onGreen ? 'text-ink-900/70' : 'text-green-700'}`}>Foradori</span>
                 </Link>
 
                 <div className="flex items-center gap-8 max-sm:gap-5">
                     <a
                         href={CV_URL}
                         download={CV_FILENAME}
-                        className="flex items-center gap-2 rounded-full border border-green-500 px-4 py-2 text-xs font-semibold tracking-[0.2em] text-green-500 transition-colors hover:bg-green-500 hover:text-ink-900 max-sm:px-3"
+                        className={`flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold tracking-[0.2em] transition-colors duration-300 max-sm:hidden ${onGreen
+                            ? 'border-ink-900 text-ink-900 hover:bg-ink-900 hover:text-green-500'
+                            : 'border-green-500 text-green-500 hover:bg-green-500 hover:text-ink-900'}`}
                     >
                         <DownloadSimple size={16} weight="bold" />
                         BAIXAR CV
@@ -51,7 +62,7 @@ export default function SiteHeader() {
                     <button
                         type="button"
                         onClick={() => setIsOpen(true)}
-                        className="flex items-center gap-3 text-green-500 hover:text-green-300 transition-colors"
+                        className={`flex items-center gap-3 transition-colors duration-300 ${onGreen ? 'text-ink-900 hover:text-ink-800' : 'text-green-500 hover:text-green-300'}`}
                         aria-label="Abrir menu"
                     >
                         <MenuIcon />
