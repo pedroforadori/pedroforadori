@@ -44,7 +44,7 @@ export function Hero() {
             <a
                 href="#work-section"
                 aria-label="Rolar para os projetos"
-                className="absolute bottom-[10%] right-[5%] z-20 flex h-40 w-6 justify-center max-sm:hidden"
+                className="absolute right-[5%] top-1/2 z-20 flex h-40 w-6 -translate-y-1/2 justify-center max-sm:hidden"
             >
                 <span className="relative h-full w-px overflow-hidden bg-white/10">
                     <span className="scroll-line absolute inset-0 bg-green-500" />

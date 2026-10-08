@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useState } from "react";
 import me from '../../public/assets/me.jpg'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
+import { WHATSAPP_URL } from '../data/contact'
 import Loader from "./loader";
 
 export default function Contact() {
@@ -114,7 +115,7 @@ export default function Contact() {
           Ou, se preferir, fale comigo direto pelo
           <span className="underline">
             <Link
-              href="https://wa.me/5511981024517?text=Ola!%20Vamos%20conversar%20sobre%20seu%20projeto?"
+              href={WHATSAPP_URL}
               className="ml-2 cursor-pointer"
               target="_blank"
             >

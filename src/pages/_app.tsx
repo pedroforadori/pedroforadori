@@ -4,6 +4,7 @@ import Head from "next/head";
 import { LoadingContentProvider, useLoading } from "../contexts/LoadingContentContext";
 import "../styles/global.css";
 import SiteHeader from "../components/siteHeader";
+import WhatsappButton from "../components/whatsappButton";
 
 function AppContent({ Component, pageProps }: AppProps) {
   const { isLoading } = useLoading()
@@ -25,6 +26,7 @@ function AppContent({ Component, pageProps }: AppProps) {
       <SiteHeader />
 
       <Component {...pageProps} />
+      <WhatsappButton />
     </>
   );
 }
