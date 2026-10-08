@@ -1,31 +1,32 @@
+import Link from "next/link";
 import services from "../data/services";
-import Card from "./card";
+import InfoCardContent, { INFO_CARD_CLASS } from "./infoCard";
 
 export default function Services(){
   return (
-    <div 
-      className="mx-auto grid grid-cols-2 mb-32
-      max-sm:grid-cols-1 max-sm:mb-16" 
-      data-aos="fade-up" 
-      data-aos-duration="3000"
-  >
-    {services.map(item => (
-        <Card 
-            key={item.id} 
-            logo={item.logo} 
-            title={item.title} 
-            hover={false} 
-            textHeight={'230px'}
-            textWidth={'230px'}
-            width={'230px'}
-            height={'230px'}
-            topText={'-13.5rem'}
-            imageSize={50}
-            marginBottonTitle={'0rem'}
-            spaceBottonLogo={'m-4'}
-            resume={item.resume}
-        />
+    <div
+      className="mx-auto mb-32 grid w-full max-w-3xl grid-cols-2 gap-4 px-6
+      max-sm:grid-cols-1 max-sm:mb-16"
+    >
+      {services.map((item, i) => (
+        <Link
+          key={item.id}
+          href="#contact-section"
+          className={`${INFO_CARD_CLASS} block transition-colors duration-300 hover:border-green-500`}
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay={i * 100}
+        >
+          <InfoCardContent
+            logo={item.logo}
+            title={item.title}
+            description={item.resume}
+            footerLabel="Solicitar orçamento"
+            logoBackground={false}
+            index={i}
+          />
+        </Link>
       ))}
-  </div>
+    </div>
   )
 }

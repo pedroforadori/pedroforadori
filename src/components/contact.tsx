@@ -50,8 +50,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center w-full bg-green-500 h-screen mt-[-80px]">
-      <div className="grid grid-cols-2 gap-8 max-sm:grid-cols-1 opacity-80 max-sm:mt-14">
+    <div className="relative flex flex-col justify-center items-center w-full bg-green-500 min-h-screen py-16 px-6">
+      <div className="grid grid-cols-2 gap-8 max-sm:grid-cols-1 max-sm:w-full max-sm:max-w-sm max-sm:justify-items-center opacity-80">
         <motion.div
           initial={{ '--rotate': '0deg' } as any}
           animate={{ '--rotate': '360deg' } as any}
@@ -67,7 +67,7 @@ export default function Contact() {
         
         <form
           onSubmit={handleSendEmail}
-          className="flex flex-col gap-4 mt-4 max-sm:mt-0"
+          className="flex flex-col gap-4 mt-4 max-sm:mt-0 max-sm:w-full"
         >
           <input
             type="text"
@@ -109,9 +109,9 @@ export default function Contact() {
         </form>
       </div>
 
-      <div className="mt-5 flex flex-col items-center gap-3 justify-center text-xl w-2/4">
+      <div className="mt-8 flex flex-col items-center gap-3 justify-center text-xl w-2/4 text-center max-sm:w-full max-sm:max-w-sm max-sm:text-base">
         <p className="text-black">
-          Ou vou voce pode entrar em contato comigo direto pelo
+          Ou, se preferir, fale comigo direto pelo
           <span className="underline">
             <Link
               href="https://wa.me/5511981024517?text=Ola!%20Vamos%20conversar%20sobre%20seu%20projeto?"

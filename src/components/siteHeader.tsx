@@ -16,6 +16,15 @@ const MENU_ITEMS = [
 
 export default function SiteHeader() {
     const [isOpen, setIsOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+
+    // depois do topo, o header ganha fundo para não brigar com o conteúdo que passa por baixo
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 10)
+        onScroll()
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : ''
@@ -23,7 +32,7 @@ export default function SiteHeader() {
 
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-10 py-6 max-sm:px-5 max-sm:py-4">
+            <header className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-10 py-6 transition-colors duration-300 max-sm:px-5 max-sm:py-4 ${scrolled ? 'bg-ink-900/80 backdrop-blur-md' : ''}`}>
                 <Link href="/" className="font-display uppercase text-4xl leading-none tracking-tight max-sm:text-2xl">
                     <span className="text-green-500">Pedro</span>{' '}
                     <span className="text-green-700">Foradori</span>

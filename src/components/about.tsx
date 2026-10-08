@@ -3,9 +3,7 @@ import AOS from 'aos'
 import workItem from "../data/work-item";
 import TitleTopic from "./titleTopic";
 import Services from "./services";
-import Frontend from "./frontend";
-import Mobile from "./mobile";
-import Backend from "./backend";
+import StackAquarium from "./stackAquarium";
 
 export default function About() {
     const [ yearsJob, setYearsJob ] = useState<number | null>(0)
@@ -31,14 +29,14 @@ export default function About() {
             max-sm:w-96 max-sm:mb-4">
                 Olá! Meu nome é Pedro, moro em São Paulo e trabalho na área de desenvolvimento desde 2011. Posso te ajudar com seu projeto?
             </p> */}
-            <div className="flex flex-row gap-16 mb-24 mt-10">
-                <p className="text-green-400 text-6xl flex flex-col justify-center items-center">
+            <div className="flex flex-row gap-16 mb-24 mt-10 max-sm:gap-6 max-sm:px-4">
+                <p className="text-green-400 text-6xl flex flex-col justify-center items-center text-center max-sm:text-5xl">
                     {yearsJob ? yearsJob - 2011 : 0} <br /> <span className="text-xs text-white"> anos de experiencia</span>
                 </p> 
-                <p className="text-green-400 text-6xl flex flex-col justify-center items-center">
+                <p className="text-green-400 text-6xl flex flex-col justify-center items-center text-center max-sm:text-5xl">
                     {workItem.length} <span className="text-xs text-white"> clientes</span>
                 </p>
-                <p className="text-green-400 text-6xl flex flex-col justify-center items-center">
+                <p className="text-green-400 text-6xl flex flex-col justify-center items-center text-center max-sm:text-5xl">
                     {countProject} <span className="text-xs text-white"> projetos</span>
                 </p>
             </div>
@@ -46,14 +44,8 @@ export default function About() {
             <TitleTopic text="SERVIÇOS" />
             <Services />
 
-            <TitleTopic text="FRONT-END" />
-            <Frontend />
-
-            <TitleTopic text="MOBILE" />
-            <Mobile />
- 
-            <TitleTopic text="BACK-END" />
-            <Backend />
+            <TitleTopic text="STACKS" />
+            <StackAquarium />
         </div>
     )
 }
