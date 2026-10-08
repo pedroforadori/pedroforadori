@@ -15,6 +15,8 @@ const LAYOUT = {
     compact: { wall: 18, gap: 14, flee: 120 },
 }
 const FLEE_FORCE = 2600
+// "Reduzir Movimento" ativo no sistema: continua nadando, só que bem mais calmo
+const CALM = { speed: 0.35, maxSpeed: 160, flee: 0.4 }
 
 type Fish = {
     x: number
@@ -49,7 +51,8 @@ export default function StackAquarium() {
 
     useEffect(() => {
         const tank = tankRef.current
-        if (!tank || reducedMotion) return
+        if (!tank) return
+        const calm = reducedMotion
 
         let width = tank.clientWidth
         let height = tank.clientHeight
@@ -73,7 +76,7 @@ export default function StackAquarium() {
             const col = i % cols, row = Math.floor(i / cols)
             const base = portrait ? Math.PI / 2 : 0
             const heading = base + (Math.random() < 0.5 ? 0 : Math.PI) + random(-0.4, 0.4)
-            const speed = random(BASE_SPEED.min, BASE_SPEED.max)
+            const speed = random(BASE_SPEED.min, BASE_SPEED.max) * (calm ? CALM.speed : 1)
             return {
                 x: col * cellW + (cellW - w) / 2 + random(-10, 10),
                 y: row * cellH + (cellH - h) / 2 + random(-8, 8),
@@ -98,7 +101,7 @@ export default function StackAquarium() {
                 let ax = 0, ay = 0
 
                 // nado livre: a direção desejada muda devagar, preferindo a horizontal
-                f.heading += random(-WANDER, WANDER) * dt
+                f.heading += random(-WANDER, WANDER) * dt * (calm ? 0.5 : 1)
                 ax += Math.cos(f.heading) * swimX
                 ay += Math.sin(f.heading) * swimY
 
@@ -125,7 +128,7 @@ export default function StackAquarium() {
                     const dx = f.x + f.w / 2 - pointer.x, dy = f.y + f.h / 2 - pointer.y
                     const dist = Math.hypot(dx, dy) || 1
                     if (dist < flee) {
-                        const force = (1 - dist / flee) * FLEE_FORCE
+                        const force = (1 - dist / flee) * FLEE_FORCE * (calm ? CALM.flee : 1)
                         ax += (dx / dist) * force
                         ay += (dy / dist) * force
                         f.heading = Math.atan2(dy, dx)
@@ -137,7 +140,7 @@ export default function StackAquarium() {
 
                 // volta aos poucos para a velocidade de cruzeiro
                 const speed = Math.hypot(f.vx, f.vy) || 1
-                const target = Math.min(speed, MAX_SPEED)
+                const target = Math.min(speed, calm ? CALM.maxSpeed : MAX_SPEED)
                 const eased = target + (f.speed - target) * Math.min(1, dt * 1.6)
                 f.vx = (f.vx / speed) * eased
                 f.vy = (f.vy / speed) * eased
@@ -175,7 +178,7 @@ export default function StackAquarium() {
                 if (f.x + f.w > width) { f.x = width - f.w; f.vx = -Math.abs(f.vx) }
                 if (f.y + f.h > height) { f.y = height - f.h; f.vy = -Math.abs(f.vy) }
 
-                const tilt = Math.max(-8, Math.min(8, (Math.atan2(f.vy, Math.abs(f.vx)) * 180) / Math.PI))
+                const tilt = calm ? 0 : Math.max(-8, Math.min(8, (Math.atan2(f.vy, Math.abs(f.vx)) * 180) / Math.PI))
                 f.el.style.transform = `translate3d(${f.x}px, ${f.y}px, 0) rotate(${tilt}deg)`
             }
 
@@ -229,12 +232,12 @@ export default function StackAquarium() {
     return (
         <div className="mb-32 w-full max-sm:mb-16">
             <div ref={tankRef} className="relative h-[70vh] min-h-[460px] w-full touch-pan-y overflow-hidden max-sm:h-[85vh]">
-                <ul className={reducedMotion ? 'flex h-full flex-wrap content-center justify-center gap-3 p-6' : ''}>
+                <ul>
                     {STACKS.map((item, i) => (
                         <li key={`${item.title}-${i}`}>
                             <div
                                 ref={el => { fishRefs.current[i] = el }}
-                                className={`${reducedMotion ? '' : 'absolute left-0 top-0 will-change-transform'}
+                                className={`absolute left-0 top-0 will-change-transform
                                 flex select-none items-center gap-2 whitespace-nowrap rounded-full border border-white/[0.15]
                                 bg-ink-800/90 py-2 pl-2 pr-4 text-sm text-white shadow-lg backdrop-blur max-sm:gap-1.5 max-sm:py-1.5 max-sm:pl-1.5 max-sm:pr-3 max-sm:text-xs`}
                             >

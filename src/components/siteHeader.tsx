@@ -19,14 +19,12 @@ const MENU_ITEMS = [
 
 export default function SiteHeader() {
     const [isOpen, setIsOpen] = useState(false)
-    const [scrolled, setScrolled] = useState(false)
     const [onGreen, setOnGreen] = useState(false)
 
     useEffect(() => {
         const onScroll = () => {
-            // no celular, depois do topo, o header ganha fundo para não brigar com o conteúdo
-            setScrolled(window.scrollY > 10)
-            // sobre a seção verde de contato, as cores do header escurecem para continuar legíveis
+            // no desktop, sobre a seção verde de contato, as cores do header escurecem para continuar legíveis
+            // (no celular o header tem faixa escura fixa, então mantém o verde)
             const contact = document.getElementById(GREEN_SECTION_ID)?.getBoundingClientRect()
             setOnGreen(!!contact && contact.top <= HEADER_PROBE_Y && contact.bottom >= HEADER_PROBE_Y)
         }
@@ -41,10 +39,10 @@ export default function SiteHeader() {
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-10 py-6 transition-colors duration-300 max-sm:px-5 max-sm:py-4 ${scrolled && !onGreen ? 'max-sm:bg-ink-900/80 max-sm:backdrop-blur-md' : ''}`}>
+            <header className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-10 py-6 transition-colors duration-300 max-sm:px-5 max-sm:py-4 max-sm:bg-ink-900/80 max-sm:backdrop-blur-md`}>
                 <Link href="/" className="font-display uppercase text-4xl leading-none tracking-tight max-sm:text-2xl">
-                    <span className={`transition-colors duration-300 ${onGreen ? 'text-ink-900' : 'text-green-500'}`}>Pedro</span>{' '}
-                    <span className={`transition-colors duration-300 ${onGreen ? 'text-ink-900/70' : 'text-green-700'}`}>Foradori</span>
+                    <span className={`transition-colors duration-300 ${onGreen ? 'text-green-500 sm:text-ink-900' : 'text-green-500'}`}>Pedro</span>{' '}
+                    <span className={`transition-colors duration-300 ${onGreen ? 'text-green-700 sm:text-ink-900/70' : 'text-green-700'}`}>Foradori</span>
                 </Link>
 
                 <div className="flex items-center gap-8 max-sm:gap-5">
@@ -62,7 +60,7 @@ export default function SiteHeader() {
                     <button
                         type="button"
                         onClick={() => setIsOpen(true)}
-                        className={`flex items-center gap-3 transition-colors duration-300 ${onGreen ? 'text-ink-900 hover:text-ink-800' : 'text-green-500 hover:text-green-300'}`}
+                        className={`flex items-center gap-3 transition-colors duration-300 ${onGreen ? 'text-green-500 sm:text-ink-900 sm:hover:text-ink-800' : 'text-green-500 hover:text-green-300'}`}
                         aria-label="Abrir menu"
                     >
                         <MenuIcon />
