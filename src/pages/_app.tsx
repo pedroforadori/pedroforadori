@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 import { LoadingContentProvider, useLoading } from "../contexts/LoadingContentContext";
 import "../styles/global.css";
 import SiteHeader from "../components/siteHeader";
@@ -27,6 +28,7 @@ function AppContent({ Component, pageProps }: AppProps) {
 
       <Component {...pageProps} />
       <WhatsappButton />
+      <Analytics />
     </>
   );
 }
