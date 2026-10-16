@@ -89,7 +89,7 @@ export default [
         id: 9,
         project: 10,
         logo: '/assets/banco-pan.png',
-        title: 'Movida: seminovos',
+        title: 'Banco Pan: Projetos internos',
         description: [
             'Desenvolvimento de projetos internos. Para as areas:',
             'Cartões, ouvidoria, juridico e compliance.'
