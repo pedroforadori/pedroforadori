@@ -393,6 +393,30 @@ export default [
         ]
     },
     {
+        id: 19,
+        project: 1,
+        logo: '/assets/analisai.png',
+        title: 'Analisaí: Nota do seu perfil no LinkedIn',
+        description: ['A pessoa envia o PDF do próprio perfil do LinkedIn, informa o cargo que busca e recebe uma nota de 0 a 100 gerada por IA, com análise por seção, pontos fortes, melhorias priorizadas e sugestões de reescrita. Também cruza as informações com o currículo e tem cobrança por créditos via Mercado Pago.'],
+        stack: [
+            'Next.js',
+            'React',
+            'TypeScript',
+            'Tailwind CSS',
+            'Vercel AI SDK',
+            'Google Gemini',
+            'Upstash Redis'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'Analisaí',
+                url: 'https://analisai.app.br/',
+            }
+
+        ]
+    },
+    {
         id: 0,
         project: 1,
         logo: '/assets/bitone.svg',
