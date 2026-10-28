@@ -44,8 +44,10 @@ export default function About() {
             <TitleTopic text="SERVIÇOS" />
             <Services />
 
-            <TitleTopic text="STACKS" />
-            <StackAquarium />
+            <div id="stacks-section" className="w-full flex flex-col justify-center items-center gap-4 scroll-mt-24">
+                <TitleTopic text="STACKS" />
+                <StackAquarium />
+            </div>
         </div>
     )
 }

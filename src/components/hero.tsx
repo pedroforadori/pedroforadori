@@ -36,8 +36,10 @@ export function Hero() {
                 >
                     Desenvolvedor Web e Mobile criando produtos digitais
                     com <span className="text-green-500">React</span>,{' '}
-                    <span className="text-green-500">Next.js</span> e{' '}
-                    <span className="text-green-500">React Native</span>
+                    <span className="text-green-500">Next.js</span>,{' '}
+                    <span className="text-green-500">React Native</span>,{' '}
+                    <span className="text-green-500">Node.js</span>,{' '}
+                    <a href="#stacks-section" className="text-green-500 underline underline-offset-4 hover:text-green-400">entre outras</a>
                 </motion.p>
             </div>
             {/* indicador de rolagem: linha fina com um traço verde descendo */}
