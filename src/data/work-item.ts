@@ -417,6 +417,49 @@ export default [
         ]
     },
     {
+        id: 20,
+        project: 1,
+        logo: '/assets/site.png',
+        title: 'M.Pereira Advocacia: Landing page',
+        description: ['Manutenção da landing page do escritório: destravamento do editor do site e reinstalação da tag do Google Ads para acompanhar as conversões das campanhas.'],
+        stack: [
+            'Landing Page',
+            'Google Ads'
+        ],
+        site: [
+            {
+                id: 0,
+                title: 'M.Pereira Advocacia',
+                url: 'https://mpereiraadvocacia.com.br/',
+            }
+
+        ]
+    },
+    {
+        id: 21,
+        project: 1,
+        logo: '/assets/system.png',
+        title: 'Eix 3D: Protótipo AR do ar-condicionado',
+        description: [
+            'Protótipo para pitch que mostra os fluxos do sistema de ar-condicionado de um prédio.',
+            'Tour 3D com a planta em corte, guiado em 5 passos.',
+            'Realidade aumentada em cima das fotos da apresentação, com modo sem câmera e versão em português e inglês.'
+        ],
+        stack: [
+            'Three.js',
+            'MindAR',
+            'Vanilla.js',
+            'WebGL'
+        ],
+        site: [
+            {
+                id: 0,
+                title: '',
+                url: '',
+            }
+        ]
+    },
+    {
         id: 0,
         project: 1,
         logo: '/assets/bitone.svg',
