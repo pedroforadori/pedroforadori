@@ -454,8 +454,8 @@ export default [
         site: [
             {
                 id: 0,
-                title: '',
-                url: '',
+                title: 'Eix 3D',
+                url: 'https://eix-3d.netlify.app/',
             }
         ]
     },
