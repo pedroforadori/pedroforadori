@@ -419,7 +419,7 @@ export default [
     {
         id: 20,
         project: 1,
-        logo: '/assets/site.png',
+        logo: '/assets/mpereira.jpg',
         title: 'M.Pereira Advocacia: Landing page',
         description: ['Manutenção da landing page do escritório: destravamento do editor do site e reinstalação da tag do Google Ads para acompanhar as conversões das campanhas.'],
         stack: [
