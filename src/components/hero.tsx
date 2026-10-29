@@ -1,8 +1,28 @@
 import { motion } from 'framer-motion'
 import { useLoading } from '../contexts/LoadingContentContext'
+import { WHATSAPP_URL } from '../data/contact'
+import stackFront from '../data/stack-front'
+import stackMobile from '../data/stack-mobile'
+import stackBack from '../data/stack-back'
+
+const HERO_STACKS = ['React', 'Next.js', 'React Native', 'TypeScript', 'Node.js', 'AWS']
+const CAREER_START = new Date(2011, 7, 1) // agosto de 2011
+
+// anos completos desde o início da carreira
+function getYearsOfExperience() {
+    const now = new Date()
+    const years = now.getFullYear() - CAREER_START.getFullYear()
+    return now.getMonth() < CAREER_START.getMonth() ? years - 1 : years
+}
+
+// conta só as stacks da seção que não aparecem na linha do hero
+const otherStacksCount = [...stackFront, ...stackMobile, ...stackBack]
+    .filter(item => !HERO_STACKS.some(name => name.toLowerCase() === item.title.toLowerCase()))
+    .length
 
 export function Hero() {
     const { isLoading } = useLoading()
+    const yearsOfExperience = getYearsOfExperience()
 
     return (
         <section className="relative h-screen w-full overflow-hidden bg-ink-900">
@@ -20,7 +40,7 @@ export function Hero() {
             <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pt-16 text-center">
                 <motion.h1
                     className="font-extrabold uppercase leading-[0.9] tracking-tight text-white/20 mix-blend-screen
-                    text-[clamp(3rem,11vw,9.5rem)]"
+                    text-[clamp(2.5rem,11vw,9.5rem)] max-sm:text-[clamp(2.5rem,15vw,4rem)]"
                     initial={{ opacity: 0, y: 30 }}
                     animate={isLoading ? {} : { opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
@@ -28,19 +48,48 @@ export function Hero() {
                     Pedro<br />Foradori
                 </motion.h1>
 
-                <motion.p
-                    className="mt-8 max-w-2xl text-2xl font-semibold leading-snug text-white max-sm:text-lg"
+                <motion.div
+                    className="mt-8 max-w-3xl text-white max-sm:mt-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isLoading ? {} : { opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 }}
                 >
-                    Desenvolvedor Web e Mobile criando produtos digitais
-                    com <span className="text-green-500">React</span>,{' '}
-                    <span className="text-green-500">Next.js</span>,{' '}
-                    <span className="text-green-500">React Native</span>,{' '}
-                    <span className="text-green-500">Node.js</span>,{' '}
-                    <a href="#stacks-section" className="text-green-500 underline underline-offset-4 hover:text-green-400">e mais</a>
-                </motion.p>
+                    <p className="text-2xl font-bold leading-snug max-sm:text-lg">
+                        Sites, sistemas e apps que funcionam de verdade.
+                    </p>
+                    <p className="mt-2 text-lg font-normal text-white/80 max-sm:text-sm">
+                        Desenvolvedor Web e Mobile sênior há mais de {yearsOfExperience} anos.
+                    </p>
+
+                    <p className="mt-6 text-lg font-semibold text-green-500 max-sm:mt-4 max-sm:text-sm">
+                        {HERO_STACKS.join(' · ')}{' '}
+                        <a href="#stacks-section" className="whitespace-nowrap underline underline-offset-4 hover:text-green-400">
+                            + {otherStacksCount} tecnologias
+                        </a>
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    className="mt-10 flex flex-wrap justify-center gap-4 max-sm:mt-8 max-sm:gap-3"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isLoading ? {} : { opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.7 }}
+                >
+                    <a
+                        href={WHATSAPP_URL}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full bg-green-500 px-7 py-3 font-semibold text-ink-900 transition hover:bg-green-400 max-sm:px-5 max-sm:text-sm"
+                    >
+                        Fale comigo sobre seu projeto
+                    </a>
+                    <a
+                        href="#work-section"
+                        className="rounded-full border border-white px-7 py-3 font-semibold text-white transition hover:bg-white hover:text-ink-900 max-sm:px-5 max-sm:text-sm"
+                    >
+                        Ver projetos
+                    </a>
+                </motion.div>
             </div>
             {/* indicador de rolagem: linha fina com um traço verde descendo */}
             <a

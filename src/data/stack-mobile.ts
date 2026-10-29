@@ -7,7 +7,17 @@ export default [
     },
     {
         id: 1,
+        logo: '/assets/expo.svg',
+        title: 'Expo',
+    },
+    {
+        id: 2,
         logo: '/assets/ionic.png',
         title: 'Ionic',
+    },
+    {
+        id: 3,
+        logo: '/assets/detox.svg',
+        title: 'Detox',
     }
 ]
