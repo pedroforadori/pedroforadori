@@ -39,7 +39,7 @@ export function Hero() {
                     <span className="text-green-500">Next.js</span>,{' '}
                     <span className="text-green-500">React Native</span>,{' '}
                     <span className="text-green-500">Node.js</span>,{' '}
-                    <a href="#stacks-section" className="text-green-500 underline underline-offset-4 hover:text-green-400">entre outras</a>
+                    <a href="#stacks-section" className="text-green-500 underline underline-offset-4 hover:text-green-400">e mais</a>
                 </motion.p>
             </div>
             {/* indicador de rolagem: linha fina com um traço verde descendo */}
